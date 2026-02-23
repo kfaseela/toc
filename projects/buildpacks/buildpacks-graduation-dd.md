@@ -29,19 +29,23 @@ N/A
 ### Required
 
 - [ ] **Engage with the domain specific TAG(s) to increase awareness through a presentation or completing a General Technical Review.**
-  - Not provided in the graduation application issue yet (date/link TBD).
-
-<!-- (TOC Evaluation goes here) --> 
+  - Tech Review request: https://github.com/cncf/toc/issues/1983
+  - Initial version of the graduation Tech Review (GTR): https://github.com/cncf/toc/pull/2047
 
 - [ ]  **All project metadata and resources are [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/).**
 
-Project assertion (from application): The Buildpacks project states it operates under vendor-neutral governance guided by its Technical Oversight Committee and that project communication/messaging/collaboration is vendor-neutral, linking to:
+Project assertion (from application): The Buildpacks project states it operates under vendor-neutral governance guided by its Technical Oversight Committee and that project communication/messaging/collaboration and support resources are vendor-neutral, linking to:
 - https://github.com/buildpacks/community/blob/main/TEAMS.md#technical-oversight-committee
+- GitHub org(s): https://github.com/buildpacks, https://github.com/buildpacks-community
+- Website: https://buildpacks.io/
+- Slack: https://slack.buildpacks.io/
 
 <!-- (TOC Evaluation goes here) --> 
+- Vendor-neutrality concern being tracked publicly: https://github.com/buildpacks/community/issues/281
 
 - [ ] **Review and acknowledgement of expectations for [Sandbox](sandbox.cncf.io) projects and requirements for moving forward through the CNCF Maturity levels.**		
    - [ ] Met during Project's application on 31-08-2018.
+   - Additional review/acknowledgement: TOC sponsor kickoff meeting with Buildpacks maintainers on 2025-12-16 to set Graduation expectations.
 
 Project assertion (from application): The project states it has reviewed and understands CNCF maturity level expectations and points to prior TOC artifacts:
 - Sandbox proposal PR: https://github.com/cncf/toc/pull/150
@@ -61,7 +65,7 @@ Completion of this due diligence document, resolution of concerns raised, and pr
 Project-provided links (from application):
 - Installation documentation: https://buildpacks.io/docs/app-journey/
 - Contributing/community documentation: https://buildpacks.io/community/#contributing
-- “Cloud Native Buildpacks Due Diligence” (Google Doc): https://docs.google.com/document/d/1tb3mK5cJmaQLO8xR__9NaH2GMrdn3WPjAZFBJYsXrxY/edit?usp=sharing
+- “Cloud Native Buildpacks Incubation Due Diligence” (Google Doc): https://docs.google.com/document/d/1tb3mK5cJmaQLO8xR__9NaH2GMrdn3WPjAZFBJYsXrxY/edit?usp=sharing
 
 <!-- (TOC Evaluation goes here) --> 
 
