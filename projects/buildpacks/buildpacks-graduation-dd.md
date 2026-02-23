@@ -1,6 +1,6 @@
-# $PROJECT Graduation Due Diligence
+# Buildpacks Graduation Due Diligence
 
-- Link to [Graduation application issue]()
+- Link to [Graduation application issue](https://github.com/cncf/toc/issues/1538)
 
 <!-- This template provides the TOC with the outline for completing due diligence of a project to move levels. This universal template is designed to capture all criteria so the TOC may ensure prior level criteria do not regress. As part of completing the due diligence, the TOC member should update the template to convey the level the project applied for the criteria by bolding the level indicated where the criteria is relevant. -->
 
@@ -29,16 +29,26 @@ N/A
 ### Required
 
 - [ ] **Engage with the domain specific TAG(s) to increase awareness through a presentation or completing a General Technical Review.**
-  - This was completed and occurred on DD-MMM-YYYY, and can be discovered at $LINK.
+  - Not provided in the graduation application issue yet (date/link TBD).
 
 <!-- (TOC Evaluation goes here) --> 
 
 - [ ]  **All project metadata and resources are [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/).**
 
+Project assertion (from application): The Buildpacks project states it operates under vendor-neutral governance guided by its Technical Oversight Committee and that project communication/messaging/collaboration is vendor-neutral, linking to:
+- https://github.com/buildpacks/community/blob/main/TEAMS.md#technical-oversight-committee
+
 <!-- (TOC Evaluation goes here) --> 
 
 - [ ] **Review and acknowledgement of expectations for [Sandbox](sandbox.cncf.io) projects and requirements for moving forward through the CNCF Maturity levels.**		
-   - [ ] Met during Project's application on DD-MMM-YYYY.
+   - [ ] Met during Project's application on 31-08-2018.
+
+Project assertion (from application): The project states it has reviewed and understands CNCF maturity level expectations and points to prior TOC artifacts:
+- Sandbox proposal PR: https://github.com/cncf/toc/pull/150
+- Incubation review PR: https://github.com/cncf/toc/pull/338
+- Process / criteria references:
+  - https://github.com/cncf/toc/blob/main/process/README.md
+  - https://github.com/cncf/toc/blob/main/process/graduation_criteria.md
 
 <!-- (TOC Evaluation goes here) --> 
 
@@ -47,6 +57,11 @@ N/A
 Completion of this due diligence document, resolution of concerns raised, and presented for public comment satisfies the Due Diligence Review criteria.
 
 - [ ] **Additional documentation as appropriate for project type, e.g.: installation documentation, end user documentation, reference implementation and/or code samples.**
+
+Project-provided links (from application):
+- Installation documentation: https://buildpacks.io/docs/app-journey/
+- Contributing/community documentation: https://buildpacks.io/community/#contributing
+- “Cloud Native Buildpacks Due Diligence” (Google Doc): https://docs.google.com/document/d/1tb3mK5cJmaQLO8xR__9NaH2GMrdn3WPjAZFBJYsXrxY/edit?usp=sharing
 
 <!-- (TOC Evaluation goes here) --> 
 
