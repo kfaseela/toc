@@ -39,7 +39,7 @@ N/A
 
 <!-- (TOC Evaluation goes here) -->
 
-TOC reviewed the graduation application position that Buildpacks operates under vendor-neutral governance guided by its Technical Oversight Committee and that project communication/messaging/collaboration and support resources are vendor-neutral, with the following references:
+Buildpacks operates under vendor-neutral governance guided by its Technical Oversight Committee, and project communication/messaging/collaboration and support resources are vendor-neutral, with the following references:
 - https://github.com/buildpacks/community/blob/main/TEAMS.md#technical-oversight-committee
 - GitHub org(s): https://github.com/buildpacks, https://github.com/buildpacks-community
 - Website: https://buildpacks.io/
@@ -54,7 +54,7 @@ TOC reviewed the graduation application position that Buildpacks operates under 
    - Met during initial application on 31-08-2018.
    - Additional review/acknowledgement: TOC sponsor kickoff meeting with Buildpacks maintainers on 2025-12-16 to set Graduation expectations.
 
-TOC reviewed acknowledgement evidence against prior CNCF TOC artifacts:
+Acknowledgement evidence against prior CNCF TOC artifacts:
 - Sandbox proposal PR: https://github.com/cncf/toc/pull/150
 - Incubation review PR: https://github.com/cncf/toc/pull/338
 - Process / criteria references:
@@ -71,7 +71,7 @@ Completion of this due diligence document, resolution of concerns raised, and pr
 
 <!-- (TOC Evaluation goes here) -->
 
-TOC reviewed the following documentation links for this criterion:
+Documentation links for this criterion:
 - Installation documentation: https://buildpacks.io/docs/app-journey/
 - Contributing/community documentation: https://buildpacks.io/community/#contributing
 - “Cloud Native Buildpacks Incubation Due Diligence” (Google Doc): https://docs.google.com/document/d/1tb3mK5cJmaQLO8xR__9NaH2GMrdn3WPjAZFBJYsXrxY/edit?usp=sharing
@@ -549,16 +549,16 @@ Buildpacks maintains a public adopters list in the community repository.
 
 <!-- (TOC Evaluation goes here) -->
 
-The TOC interviewed four adopters (Google, Salesforce, Rapid7, 7SIGNAL). All four reported production usage at meaningful scale and described Buildpacks as core to container build and delivery workflows.
+Four adopters were interviewed (Google, Salesforce, Rapid7, 7SIGNAL). All four reported production usage at meaningful scale and described Buildpacks as core to container build and delivery workflows.
 
 
-TOC received and reviewed an adopter list to verify level-appropriate usage (production use for graduation, dev/test use for incubation).
+An adopter list was reviewed to verify level-appropriate usage (production use for graduation, dev/test use for incubation).
 
 - [x] **TOC verification of adopters.**
 
 <!-- (TOC Evaluation goes here) -->
 
-TOC verification was completed through four adopter interviews and approved summaries captured in this folder.
+Verification was completed through four adopter interviews and approved summaries captured in this folder.
 
 
 Refer to the Adoption portion of this document.
