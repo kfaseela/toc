@@ -177,8 +177,3 @@ Kubeflow is deeply embedded in CERN's infrastructure. Difficulty would vary by c
 
    Yes. CERN uses CNCF maturity levels as a signal of project health and long-term viability when evaluating technologies for adoption. Graduation status is a meaningful indicator for infrastructure decisions at CERN — it reflects that a project has demonstrated production readiness, governance maturity, and a sustainable community, all of which are important to an organization running critical scientific infrastructure.
 
----
-
-## CERN's Position on Graduation
-
-Ricardo and Raulian expressed clear support for Kubeflow's CNCF graduation. CERN's adoption at scale, active community engagement, and multi-year strategic commitment to Kubeflow are consistent with a project at graduation maturity. The identified concerns (deployment complexity, documentation gaps, upstream security dependencies) are tracked issues, not adoption blockers.
