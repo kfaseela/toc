@@ -4,11 +4,32 @@
 
 <!-- This template provides the TOC with the outline for completing due diligence of a project to move levels. This universal template is designed to capture all criteria so the TOC may ensure prior level criteria do not regress. As part of completing the due diligence, the TOC member should update the template to convey the level the project applied for the criteria by bolding the level indicated where the criteria is relevant. -->
 
-## Graduation Evaluation Summary for $PROJECT
+## Graduation Evaluation Summary for Buildpacks
 
 ### Criteria Evaluation
 
-_$TOCMEMBER conducted the due diligence of $PROJECT who applied for $LEVEL. The project [has/has not] completed the criteria that show its maturity at $LEVEL. The following criteria implementations are noteworthy to call out... $NOTABLES. The following actions were provided to the project that were considered blocking but since resolved... $BLOCKERS. The following recommendations were provided to the project that are non-blocking in the TOC's assessment but should be completed by the project to ensure continued viability of the project... $RECOMMENDATIONS._
+[Faseela K](https://github.com/kfaseela) conducted the due diligence of Cloud Native Buildpacks (CNB) who applied for Graduation. The project has completed the majority of criteria demonstrating maturity at the Graduation level. A small number of items remain in progress and are expected to be resolved ahead of the public comment period.
+
+**Noteworthy implementations:**
+- CNB is a specification-first project (Platform API, Buildpack API) with reference implementations (lifecycle, pack), driving adoption across cloud providers, CI/CD platforms, and enterprise developer platforms.
+- [General Technical Review](https://github.com/cncf/toc/pull/2047) completed on 20-Feb-2026, covering architecture, cloud-native use cases, differentiation, and ecosystem integrations.
+- Third-party security audit (OSTIF/Quarkslab) completed, findings published, and all moderate/low findings tracked to resolution in specific pack and lifecycle milestones.
+- Four production adopter interviews (Google, Salesforce, Rapid7, 7SIGNAL) confirm graduation-level usage across diverse industries at meaningful scale since 2020–2022.
+
+**Items raised and resolved during review:**
+- **Contributor ladder** ([#282](https://github.com/buildpacks/community/issues/282)): Added explicit contributor ladder and role-summary table to [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md); updated [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) with Team Lead appointment, Security Response Team composition, and 2FA requirement. → [PR#291](https://github.com/buildpacks/community/pull/291)
+- **Security process** ([#284](https://github.com/buildpacks/community/issues/284)): Enhanced [SECURITY.md](https://github.com/buildpacks/.github/blob/main/SECURITY.md) with response timelines, required report contents, and disclosure guidance. → [PR#6](https://github.com/buildpacks/.github/pull/6)
+- **Code of Conduct** ([#285](https://github.com/buildpacks/community/issues/285)): Org-level CoC updated to explicitly reference the CNCF CoC. → [PR#5](https://github.com/buildpacks/.github/pull/5)
+- **Audit/self-assessment discoverability** ([#286](https://github.com/buildpacks/community/issues/286)): Audit report and self-assessment links added to [SECURITY.md](https://github.com/buildpacks/.github/blob/main/SECURITY.md). → [PR#8](https://github.com/buildpacks/.github/pull/8)
+- **Meeting links** ([#283](https://github.com/buildpacks/community/issues/283)): Stale recording links updated to current YouTube channel. → [PR#882](https://github.com/buildpacks/docs/pull/882)
+
+**Items pending resolution prior to graduation:**
+- **Vendor-neutrality of project direction**: 2 of 5 TOC seats are vacant, and 2 of 3 active members are from Salesforce/Heroku (related companies per CNCF charter). The project has proactively opened [RFC#339](https://github.com/buildpacks/rfcs/pull/339), proposing a Steering Committee model with a 3+2 seat structure and a hard 40% corporate representation cap. Resolved once the RFC is adopted, implemented, and the new composition satisfies the cap in practice.
+- **Maintainer affiliations** ([#294](https://github.com/buildpacks/community/issues/294)): Affiliation is documented for TOC members but not yet consistently for Team Leads, Maintainers, and Component Maintainers in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md).
+- **Role offboarding documentation**: Appointment processes for Team Leads and Component Maintainers are documented; the corresponding removal/offboarding steps are not yet captured in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md).
+
+**Non-blocking recommendation:**
+- Add a cross-reference from [GOVERNANCE.md#roadmap](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#roadmap) to the RFC process to make the roadmap change path more discoverable ([#292](https://github.com/buildpacks/community/issues/292)).
 
 ### Adoption Evaluation
 
@@ -253,7 +274,7 @@ Subprojects are listed by team ownership in [TEAMS.md](https://github.com/buildp
 <!-- (TOC Evaluation goes here) -->
 
   - [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) documents team leadership and contributor roles; each team owns specific repositories and components, making subproject ownership and leadership discoverable.
-  - For a spec project, subprojects are the reference implementations orbiting the spec. Team-based ownership documented in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and [GOVERNANCE.md#teams](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#teams) covers leadership, contribution paths, and the add/remove process (via RFC and TOC decision) for each subproject. A formal sandbox/incubating/graduated-style maturity taxonomy is an implementation-ecosystem pattern and is not an applicable expectation for a spec project.
+  - For a spec project, subprojects are the reference implementations orbiting the spec. Team-based ownership documented in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and [GOVERNANCE.md#teams](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#teams) covers leadership, contribution paths, and the add/remove process (via RFC and TOC decision) for each subproject.
 
 Satisfied. Subproject leadership and contribution are documented through team ownership in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md), and the add/remove process for subprojects follows the [RFC process](https://github.com/buildpacks/rfcs#rfc-process) as documented in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md).
 
