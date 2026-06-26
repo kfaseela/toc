@@ -13,9 +13,9 @@
 
 The following criteria implementations are noteworthy:
 
-- [Kubeflow](https://www.kubeflow.org/) is a modular, Kubernetes-native AI/ML platform that provides a foundation of composable tools for building and operating ML workflows at scale. This graduation covers **6 subprojects**: Kubeflow Trainer, Kubeflow Pipelines, Kubeflow Katib, Kubeflow Notebooks, Kubeflow Spark Operator, and Kubeflow Model Registry (repo: kubeflow/hub). Each subproject satisfies the graduation criteria independently.
+- [Kubeflow](https://www.kubeflow.org/) is a modular, Kubernetes-native AI/ML platform that provides a foundation of composable tools for building and operating AI/ML workloads at scale. This graduation covers **6 subprojects**: Kubeflow Trainer, Kubeflow Pipelines, Kubeflow Katib, Kubeflow Notebooks, Kubeflow Spark Operator, and Kubeflow Hub (repo: kubeflow/hub). Each subproject satisfies the graduation criteria independently.
 - Kubeflow's [GitOps-based access control](https://github.com/kubeflow/internal-acls) via Peribolos and Prow is particularly well-designed: org membership, team membership, and repo permissions are declared in a versioned YAML file and reconciled against GitHub, with 2FA enforced for all org members.
-- The project's governance is multi-layered, with a Kubeflow Steering Committee (KSC, 5 seats, max 1 per organization) for strategic decisions and Working Groups owning each subproject. The 2026 KSC election completed on schedule, with all seats filled and no organization holding more than 1 seat.
+- The project's governance is multi-layered, with a Kubeflow Steering Committee (KSC, 5 seats, max 1 per organization) for strategic decisions, the Kubeflow Outreach Committee for community-facing coordination, the Kubeflow Distribution Committee (KDC) for release coordination, and Working Groups owning each subproject. The 2026 KSC election completed on schedule, with all seats filled and no organization holding more than 1 seat.
 - Strong contributor health per [LF Insights](https://insights.lfx.linuxfoundation.org/foundation/cncf/overview/github?project=kubeflow&routedFrom=Github&bestPractice=false&repository=all&dateFilters=Last%20365%20Days&dateRange=custom&startDate=2025-06-17&endDate=2026-06-17): 1,174 active contributors from a wide range of organizations in the past 365 days, with positive YoY growth.
 - A [General Technical Review (GTR)](https://github.com/kubeflow/community/blob/master/KUBEFLOW-GENERAL-TECHNICAL-REVIEW.md) was completed in September 2025, providing comprehensive architecture, design, and engineering documentation that satisfies several DD criteria. GTR snapshot is also submitted to cncf/toc via [Add Kubeflow GTR snapshot (toc#2180)](https://github.com/cncf/toc/pull/2180).
 - All 6 graduation subprojects hold at least an OpenSSF Best Practices Passing badge; Kubeflow Trainer and Kubeflow Katib have achieved Gold.
@@ -24,7 +24,7 @@ The following criteria implementations are noteworthy:
 
 The following blocking items were identified during the review and must be resolved before a graduation vote:
 
-- **[kubeflow/community#992](https://github.com/kubeflow/community/issues/992) - Track and resolve third-party security audit findings**: The Ada Logics audit report (Sept 2025) has been published at [security/Ada_Logics-Kubeflow-security-audit-2025.pdf](https://github.com/kubeflow/community/blob/master/security/Ada_Logics-Kubeflow-security-audit-2025.pdf) via [Publish Ada Logics security audit (community#994)](https://github.com/kubeflow/community/pull/994) - good progress. However, 12 of 14 findings (3 Critical, 6 Moderate, 2 Low) have no public tracking or fix links. The graduation criterion requires moderate and low findings to be planned/tracked for resolution. Maintainers must link where each Critical and Moderate finding is fixed or tracked (issue/PR/advisory).
+- **[kubeflow/community#992](https://github.com/kubeflow/community/issues/992) - Track and resolve third-party security audit findings**: The Ada Logics audit report (Sept 2025) was published at [security/Ada_Logics-Kubeflow-security-audit-2025.pdf](https://github.com/kubeflow/community/blob/master/security/Ada_Logics-Kubeflow-security-audit-2025.pdf) via [Publish Ada Logics security audit (community#994)](https://github.com/kubeflow/community/pull/994). The published audit contains 14 findings total: 3 critical, 7 moderate, 2 low, and 2 informational. The public [community#992 comment](https://github.com/kubeflow/community/issues/992#issuecomment-4782945952) is the tracking point for the findings in this audit. As of the current review, 7 findings are fixed, 3 are tracked, and 4 still need public tracking or closure confirmation.
 - **Adopter interview completion**: 2 of 4 planned adopter interviews completed. Remaining interviews must be completed before the TOC can formally close the "Used in appropriate capacity by at least 3 independent adopters" and "TOC verification of adopters" criteria.
 
 The following items were raised and resolved during the review:
@@ -134,7 +134,7 @@ Decision-making is documented across three processes: (1) KSC decisions ([commit
 
 - [X] **Document how role, function-based members, or sub-teams are assigned, onboarded, and removed for specific teams (example: Security Response Committee).**
 
-The [contributor ladder](https://www.kubeflow.org/docs/about/membership/) documents concrete criteria for Member, Reviewer, and Approver roles. WG lifecycle (creation, retirement) and WG Chair selection are documented in the refactored [wg-governance.md](https://github.com/kubeflow/community/blob/master/committee-steering/wg-governance.md): Chairs must be at least a community Member, hold a documented subproject role, have sustained contributions, be sponsored by a member, and be confirmed by super-majority vote of existing Chairs. Responsibilities/privileges and inactive Chair removal are also explicitly documented. All private Google Doc references removed. Resolved via [Refactor WG governance and Chair requirements (community#989)](https://github.com/kubeflow/community/pull/989).
+The [Kubeflow community page](https://www.kubeflow.org/docs/about/community/) and [Contributing](https://www.kubeflow.org/docs/about/contributing/) page provide the public entry point, while the [Kubeflow contributor ladder](https://github.com/kubeflow/community/blob/master/community-membership.md) defines how Members, Reviewers, and Approvers are onboarded and removed. The [Kubeflow governance page](https://www.kubeflow.org/docs/about/governance/) and refactored [wg-governance.md](https://github.com/kubeflow/community/blob/master/committee-steering/wg-governance.md) document WG Chair selection, responsibilities, privileges, and inactive Chair removal. Chairs must be at least a community Member, hold a documented subproject role, have sustained contributions, be sponsored by a member, and be confirmed by super-majority vote of existing Chairs. All private Google Doc references removed. Resolved via [Refactor WG governance and Chair requirements (community#989)](https://github.com/kubeflow/community/pull/989).
 
 - [X] **Document complete list of current maintainers, including names, contact information, domain of responsibility, and affiliation.**
 
@@ -142,11 +142,11 @@ The [contributor ladder](https://www.kubeflow.org/docs/about/membership/) docume
 
 - [X] **A number of active maintainers which is appropriate to the size and scope of the project.**
 
-The [CNCF project-maintainers.csv](https://github.com/cncf/foundation/blob/main/project-maintainers.csv) lists 45 Kubeflow maintainers. Per OWNERS file approver counts across the 6 graduation subprojects: Trainer (8), Pipelines (6), Katib (4), Spark Operator (7), Model Registry (8), Notebooks (2) - 35 approvers total. Maintainer count is appropriate for a project of Kubeflow's size.
+[MAINTAINERS.md](https://github.com/kubeflow/community/blob/master/MAINTAINERS.md) covers governance-level maintainers (KSC and KOC) and links to per-subproject OWNERS files for approver-level maintainers. All 6 graduation subprojects have active approvers listed in their respective OWNERS files. The maintainer count is appropriate for a project of Kubeflow's size and scope.
 
 - [X] **Document a complete maintainer lifecycle process (including roles, onboarding, offboarding, and emeritus status).**
 
-The [contributor ladder](https://www.kubeflow.org/docs/about/membership/) defines the full lifecycle: onboarding criteria for each role (Member -> Reviewer -> Approver), offboarding (12-month inactivity -> org removal; `emeritus_approvers` for inactive approvers), and WG Lead/Chair removal via super-majority vote.
+The [contributor ladder](https://github.com/kubeflow/community/blob/master/community-membership.md) defines the full lifecycle: onboarding criteria for each role (Member -> Reviewer -> Approver), offboarding (12-month inactivity -> org removal; `emeritus_approvers` for inactive approvers), and WG Lead/Chair removal via super-majority vote.
 
 - [X] **Demonstrate usage of the maintainer lifecycle with outcomes, either through the addition or replacement of maintainers as project events have required.**
 
@@ -160,7 +160,7 @@ Removal example:
 
 - [X] **Project maintainers from at least 2 organizations that demonstrates survivability.**
 
-Maintainer org diversity is strong project-wide (177 active orgs, past 365 days). Per-subproject: Trainer spans Apple, Caicloud, Nutanix, Akuity; Pipelines spans Google, Red Hat, IBM; Katib spans Apple, Caicloud, Nutanix; Spark Operator spans Apple, ByteDance, Canonical, Google; Model Registry spans Red Hat, Apple, Capital One. Notebooks approvers span Canonical and NVIDIA; WG leadership was expanded via [Update WG Notebooks docs (community#983)](https://github.com/kubeflow/community/pull/983) to include Red Hat, resolving a prior single-org concern.
+Maintainer org diversity is broad across all graduation subprojects, with approvers spanning a wide range of organizations ([LFX Insights](https://insights.lfx.dev/foundation/cncf/overview/github?project=kubeflow)). Org affiliation for governance-level maintainers is documented in the KSC and KOC member lists linked from [MAINTAINERS.md](https://github.com/kubeflow/community/blob/master/MAINTAINERS.md), and for WG leads/chairs in [wgs.yaml](https://github.com/kubeflow/community/blob/master/wgs.yaml). No subproject is controlled by a single organization. WG Notebooks leadership was expanded via [Update WG Notebooks docs (community#983)](https://github.com/kubeflow/community/pull/983), resolving a prior single-org concern.
 
 - [X] **Code and Doc ownership in Github and elsewhere matches documented governance roles.**
 
@@ -182,7 +182,7 @@ The 6 graduation subprojects are listed consistently across the graduation appli
 3. Kubeflow Katib - [kubeflow/katib](https://github.com/kubeflow/katib)
 4. Kubeflow Notebooks - [kubeflow/notebooks](https://github.com/kubeflow/notebooks)
 5. Kubeflow Spark Operator - [kubeflow/spark-operator](https://github.com/kubeflow/spark-operator)
-6. Kubeflow Model Registry - [kubeflow/hub](https://github.com/kubeflow/hub)
+6. Kubeflow Hub - [kubeflow/hub](https://github.com/kubeflow/hub)
 
 The subproject add/remove process is documented in [community/subprojects/README.md](https://github.com/kubeflow/community/tree/master/subprojects) and is directly linked from the [kubeflow.org introduction page](https://www.kubeflow.org/docs/started/introduction/#kubeflow-subprojects).
 
@@ -202,7 +202,7 @@ The subproject add/remove process is documented in [community/subprojects/README
 
 - [X] **Contributor ladder with multiple roles for contributors.**
 
-The [contributor ladder](https://www.kubeflow.org/docs/about/membership/) defines 4 levels: Member -> Reviewer -> Approver -> WG Lead/Chair, each with documented requirements, responsibilities, and privileges. Onboarding and offboarding at each step are described.
+The [contributor ladder](https://github.com/kubeflow/community/blob/master/community-membership.md) defines 4 levels: Member -> Reviewer -> Approver -> WG Lead/Chair, each with documented requirements, responsibilities, and privileges. Onboarding and offboarding at each step are described.
 
 ### Required
 
@@ -274,7 +274,7 @@ All 6 graduation subprojects have consistent release histories (verified 2026-06
 - Pipelines: 2.16.1 (2026-05-04), 2.16.0 (2026-02-25), 2.15.x (2025-11/12)
 - Spark Operator: v2.5.1 (2026-06-14), v2.5.0 (2026-03-19), v2.4.0 (2025-11-17)
 - Katib: v0.19.0 (2025-10-30), v0.18.0 (2025-03-25), v0.17.0 (2024-07-12)
-- Model Registry: v0.3.10 (2026-06-15), v0.3.9 (2026-05-04), v0.3.8 (2026-04-03)
+- Hub: v0.3.10 (2026-06-15), v0.3.9 (2026-05-04), v0.3.8 (2026-04-03)
 - Notebooks: v1.11.0 (2026-06-04) + active v2.0.0-alpha line (2026 Q2)
 
 RC/pre-release tags are used before stable releases, and patch releases are present across subprojects, indicating quality-focused release practices. The [Kubeflow Community Distribution release history](https://www.kubeflow.org/docs/kubeflow-distribution/releases/) spans from v0.6 through the current 26.03 release with detailed per-release notes.
@@ -285,7 +285,7 @@ RC/pre-release tags are used before stable releases, and patch releases are pres
 
 - [ ] **Achieving OpenSSF Best Practices silver or gold badge.**
 
-4 of 6 graduation subprojects are at Passing level (Notebooks, Pipelines, Model Registry, Spark Operator); Trainer and Katib have achieved Gold. As a suggested criterion this is non-blocking. Noted as a maturity improvement opportunity for remaining subprojects.
+[Trainer](https://www.bestpractices.dev/projects/10435) and [Katib](https://www.bestpractices.dev/projects/9941) have achieved Gold.
 
 ### Required
 
@@ -308,28 +308,9 @@ The [Kubeflow Security Self-Assessment](https://github.com/kubeflow/community/bl
 - [X] **Third Party Security Review.**
   - [ ] Moderate and low findings from the Third Party Security Review are planned/tracked for resolution.
 
-The Ada Logics security audit (Sept 2025) is publicly available: [security/Ada_Logics-Kubeflow-security-audit-2025.pdf](https://github.com/kubeflow/community/blob/master/security/Ada_Logics-Kubeflow-security-audit-2025.pdf), published via [Publish Ada Logics security audit (community#994)](https://github.com/kubeflow/community/pull/994). Tracked in [kubeflow/community#992](https://github.com/kubeflow/community/issues/992) - **reopened 2026-06-19** pending findings tracking.
+The Ada Logics security audit (Sept 2025) is publicly available: [security/Ada_Logics-Kubeflow-security-audit-2025.pdf](https://github.com/kubeflow/community/blob/master/security/Ada_Logics-Kubeflow-security-audit-2025.pdf), published via [Publish Ada Logics security audit (community#994)](https://github.com/kubeflow/community/pull/994). Tracking in [kubeflow/community#992](https://github.com/kubeflow/community/issues/992) is limited to the 14 findings in that report, and the issue was **reopened 2026-06-19** pending findings tracking.
 
-The audit found **14 issues** across the 6 graduation subprojects:
-
-| ID | Finding | Severity | Status (in report) |
-|---|---|---|---|
-| ADA-KUBEFL-09 | Command injection -> RCE in Pipelines CI | Critical | Reported |
-| ADA-KUBEFL-10 | GitHub secret leak -> repo takeover (Trainer CI) | Critical | Reported |
-| ADA-KUBEFL-13 | Code intends to authenticate but doesn't (Katib + Notebooks) | Critical | Reported |
-| ADA-KUBEFL-01 | SSRF in Pipelines CreatePipelineV1 | Moderate | Reported |
-| ADA-KUBEFL-02 | SSRF in KServe HTTPSProvider | Moderate | Reported |
-| ADA-KUBEFL-03 | Path Traversal in KServe GCS Downloader | Moderate | Reported |
-| ADA-KUBEFL-04 | Pipelines MinioObjectStore.GetFile reliability/security issues | Moderate | Reported |
-| ADA-KUBEFL-07 | Pipelines v2 path traversal from malicious object name | Moderate | Reported |
-| ADA-KUBEFL-08 | Resources missing network policies | Moderate | Reported |
-| ADA-KUBEFL-12 | Model Registry profiling endpoints enabled by default | Moderate | **Fixed** |
-| ADA-KUBEFL-05 | Katib weak image reference validation | Low | Reported |
-| ADA-KUBEFL-06 | DoS from malicious tar archive (Pipelines) | Low | Reported |
-| ADA-KUBEFL-11 | Private key in source code (Model Registry) | Informational | **Resolved** |
-| ADA-KUBEFL-14 | Stack-overflow in 3rd-party dependency (Model Registry) | Informational | Reported |
-
-Of the 14 findings: 2 are confirmed resolved/fixed (ADA-KUBEFL-12, ADA-KUBEFL-11). The remaining 12 - including 3 Critical, 6 Moderate, 2 Low, and 1 Informational - are marked "Reported" in the audit report with no public tracking issues filed in kubeflow/community or the respective subproject repos as of 2026-06-19. The sub-criterion requiring moderate and low findings to be planned/tracked for resolution is **not yet met**. Maintainers must file public tracking issues (or link existing ones) for at minimum the Critical and Moderate findings. Note: ADA-KUBEFL-02 and ADA-KUBEFL-03 are in KServe, which is now an independent CNCF project - the Kubeflow team should clarify responsibility for those.
+The audit found 14 issues across the 6 graduation subprojects: 3 critical, 7 moderate, 2 low, and 2 informational. Of those findings, 7 are fixed, 3 are tracked, and 4 still need public tracking or closure confirmation. The tracking links for this work were collected in [kubeflow/community#992](https://github.com/kubeflow/community/issues/992) as part of that issue.
 
 - [X] **Achieve the Open Source Security Foundation (OpenSSF) Best Practices passing badge.**
 
@@ -338,7 +319,7 @@ All 6 graduation subprojects hold at least Passing badge (verified via bestpract
 - [Trainer](https://www.bestpractices.dev/projects/10435): **Gold**
 - [Notebooks](https://www.bestpractices.dev/en/projects/9942): Passing
 - [Pipelines](https://www.bestpractices.dev/en/projects/9938): Passing
-- [Model Registry](https://www.bestpractices.dev/en/projects/9937): Passing
+- [Hub](https://www.bestpractices.dev/en/projects/9937): Passing
 - [Spark Operator](https://www.bestpractices.dev/en/projects/10524): Passing
 
 ## Ecosystem
@@ -356,7 +337,7 @@ All 6 graduation subprojects maintain public `ADOPTERS.md` files:
 - [Spark Operator](https://github.com/kubeflow/spark-operator/blob/master/ADOPTERS.md): 40+ adopters, many in Production
 - [Trainer](https://github.com/kubeflow/trainer/blob/master/ADOPTERS.md): ~20 adopters (AWS, Cisco, NVIDIA, Bloomberg, Red Hat, etc.)
 - [Katib](https://github.com/kubeflow/katib/blob/master/ADOPTERS.md): ~12 adopters
-- [Hub (Model Registry)](https://github.com/kubeflow/hub/blob/main/ADOPTERS.md): 5 adopters
+- [Kubeflow Hub](https://github.com/kubeflow/hub/blob/main/ADOPTERS.md): 5 adopters
 - [Pipelines](https://github.com/kubeflow/pipelines/blob/master/ADOPTERS.md): 4 adopters sparse for the most widely deployed subproject
 - [Notebooks](https://github.com/kubeflow/notebooks/blob/main/ADOPTERS.md): 1 adopter (Red Hat only) very thin - CERN addition in progress: [Add CERN to Notebooks ADOPTERS.md (notebooks#1190)](https://github.com/kubeflow/notebooks/pull/1190)
 
@@ -400,7 +381,7 @@ Per-subproject integration evidence (verified 2026-06-17):
 | **Trainer** | PyTorch, DeepSpeed, JAX, HuggingFace, XGBoost, MLX, Arrow, DataFusion | [Overview](https://www.kubeflow.org/docs/components/trainer/overview/) |
 | **Spark Operator** | YuniKorn | [YuniKorn integration](https://www.kubeflow.org/docs/components/spark-operator/user-guide/yunikorn-integration/) |
 | **Notebooks** | Jupyter, TensorFlow | [Jupyter + TF examples](https://www.kubeflow.org/docs/components/notebooks/jupyter-tensorflow-examples/) |
-| **Model Registry** | KServe (CNCF Incubating) | [Hub getting-started](https://www.kubeflow.org/docs/components/hub/getting-started/#using-model-registry-metadata) |
+| **Hub** | KServe (CNCF Incubating) | [Hub getting-started](https://www.kubeflow.org/docs/components/hub/getting-started/#using-model-registry-metadata) |
 | **Pipelines** | SeaweedFS / S3-compatible stores | [Object store config](https://www.kubeflow.org/docs/components/pipelines/operator-guides/configure-object-store/) |
 | **Katib** | Argo Workflows (CNCF Graduated) | [Trial template guide](https://www.kubeflow.org/docs/components/katib/user-guides/trial-template/) |
 
