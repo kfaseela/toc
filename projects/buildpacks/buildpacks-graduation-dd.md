@@ -18,21 +18,19 @@
 - The spec has 9+ independent platform implementations (Google Cloud, Heroku, kpack, GitLab, DigitalOcean, Spring Boot, Dokku, Fly.io, and more), demonstrating broad adoption and real-world interoperability. The RFC process (341+ RFCs, mature FCP process, supermajority voting) reflects a well-established and community-driven approach to spec evolution.
 
 **Items raised and resolved during review:**
-- **Contributor ladder** ([#282](https://github.com/buildpacks/community/issues/282)): Added explicit contributor ladder and role-summary table to [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md); updated [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) with Team Lead appointment, Security Response Team composition, and 2FA requirement. → [PR#291](https://github.com/buildpacks/community/pull/291)
-- **Security process** ([#284](https://github.com/buildpacks/community/issues/284)): Enhanced [SECURITY.md](https://github.com/buildpacks/.github/blob/main/SECURITY.md) with response timelines, required report contents, and disclosure guidance. → [PR#6](https://github.com/buildpacks/.github/pull/6)
-- **Code of Conduct** ([#285](https://github.com/buildpacks/community/issues/285)): Org-level CoC updated to explicitly reference the CNCF CoC. → [PR#5](https://github.com/buildpacks/.github/pull/5)
-- **Audit/self-assessment discoverability** ([#286](https://github.com/buildpacks/community/issues/286)): Audit report and self-assessment links added to [SECURITY.md](https://github.com/buildpacks/.github/blob/main/SECURITY.md). → [PR#8](https://github.com/buildpacks/.github/pull/8)
-- **Meeting links** ([#283](https://github.com/buildpacks/community/issues/283)): Stale recording links updated to current YouTube channel. → [PR#882](https://github.com/buildpacks/docs/pull/882)
+- **Contributor ladder** ([#282](https://github.com/buildpacks/community/issues/282)): Added explicit contributor ladder and role-summary table to [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md); updated [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) with Team Lead appointment, Security Response Team composition, and 2FA requirement. Resolved via [PR#291](https://github.com/buildpacks/community/pull/291)
+- **Security process** ([#284](https://github.com/buildpacks/community/issues/284)): Enhanced [SECURITY.md](https://github.com/buildpacks/.github/blob/main/SECURITY.md) with response timelines, required report contents, and disclosure guidance. Resolved via [PR#6](https://github.com/buildpacks/.github/pull/6)
+- **Code of Conduct** ([#285](https://github.com/buildpacks/community/issues/285)): Org-level CoC updated to explicitly reference the CNCF CoC. Resolved via [PR#5](https://github.com/buildpacks/.github/pull/5)
+- **Audit/self-assessment discoverability** ([#286](https://github.com/buildpacks/community/issues/286)): Audit report and self-assessment links added to [SECURITY.md](https://github.com/buildpacks/.github/blob/main/SECURITY.md). Resolved via [PR#8](https://github.com/buildpacks/.github/pull/8)
+- **Meeting links** ([#283](https://github.com/buildpacks/community/issues/283)): Stale recording links updated to current YouTube channel. Resolved via [PR#882](https://github.com/buildpacks/docs/pull/882)
 
 **Items pending resolution prior to graduation:**
 - **Vendor-neutrality of project direction**: 2 of 5 TOC seats are vacant, and 2 of 3 active members are from Salesforce/Heroku (related companies per CNCF charter). The project has proactively opened [RFC#339](https://github.com/buildpacks/rfcs/pull/339), proposing a Steering Committee model with a 3+2 seat structure and a hard 40% corporate representation cap. Resolved once the RFC is adopted, implemented, and the new composition satisfies the cap in practice.
 - **Maintainer affiliations** ([#294](https://github.com/buildpacks/community/issues/294)): Affiliation is documented for TOC members but not yet consistently for Team Leads, Maintainers, and Component Maintainers in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md).
-- **Role offboarding documentation**: Appointment processes for Team Leads and Component Maintainers are documented; the corresponding removal/offboarding steps are not yet captured in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md).
-
 **Non-blocking recommendations:**
 - Add a cross-reference from [GOVERNANCE.md#roadmap](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#roadmap) to the RFC process to make the roadmap change path more discoverable ([#292](https://github.com/buildpacks/community/issues/292)).
 - **Conformance mechanism documentation**: The project has no standalone conformance test suite; interoperability is enforced through the `lifecycle` reference implementation. The project should explicitly document that `lifecycle` serves as the de facto conformance mechanism for the spec, so implementers have a clear and authoritative reference.
-- **Spec-level security guidance for implementers**: The current security work (third-party audit, SECURITY.md, response process) is implementation-focused. Since the spec involves executing untrusted code (buildpacks run during container builds), the spec should document security considerations for platform implementers — trust boundaries between platform, lifecycle, and buildpack execution; filesystem isolation requirements; and network access controls during builds.
+- **Spec-level security guidance for implementers**: The current security work (third-party audit, SECURITY.md, response process) is implementation-focused. Since the spec involves executing untrusted code (buildpacks run during container builds), the spec should document security considerations for platform implementers: trust boundaries between platform, lifecycle, and buildpack execution; filesystem isolation requirements; and network access controls during builds.
 
 ### Adoption Evaluation
 
@@ -114,7 +112,7 @@ Note: this section may be augmented by the completion of a Governance Review fro
   - [GOVERNANCE.md in buildpacks/community](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) documents formal governance structure including teams, roles, voting, RFC process, and vendor-neutrality commitments.
   - [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and emeritus status demonstrate active evolution; substantial emeritus membership indicates role transitions and project maturation over time.
 
-Governance structure is documented and has evolved to include Team Leads, Special Teams (Security Response), and explicit role definitions. Project demonstrates iterative governance through RFC process and role transitions/promotions. SATISFIED.
+Governance structure is documented and has evolved to include Team Leads, Special Teams (Security Response), and explicit role definitions. Project demonstrates iterative governance through RFC process and role transitions/promotions.
 
 ### Required
 
@@ -125,7 +123,7 @@ Governance structure is documented and has evolved to include Team Leads, Specia
   - [GOVERNANCE.md in buildpacks/community](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) provides comprehensive governance documentation (repositories, TOC, teams, roles, voting, RFC process, emergencies, vendor-neutrality, security, updating governance).
   - [README.md](https://github.com/buildpacks/community/blob/main/README.md) links to [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md), making it highly discoverable.
 
-[GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) is comprehensive, well-organized, and clearly linked from community [README.md](https://github.com/buildpacks/community/blob/main/README.md). SATISFIED.
+[GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) is comprehensive, well-organized, and clearly linked from community [README.md](https://github.com/buildpacks/community/blob/main/README.md).
 
 - [x] **Governance is up to date with actual project activities, including any meetings, elections, leadership, or approval processes.**
 
@@ -136,7 +134,7 @@ Governance structure is documented and has evolved to include Team Leads, Specia
   - TOC meetings are public with notes documented; [community calendar](https://buildpacks.io/community/) lists meeting times.
   - Team Leads, maintainers, and component maintainers documented in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) with current membership and contact information.
 
-[TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and public issue/RFC tracking confirm governance structures are actively used and documented with current practices and personnel. SATISFIED.
+[TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and public issue/RFC tracking confirm governance structures are actively used and documented with current practices and personnel.
 
 - [ ] **Governance clearly documents [vendor-neutrality](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) of project direction.**
 
@@ -146,7 +144,7 @@ Governance structure is documented and has evolved to include Team Leads, Specia
   - [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) displays TOC with explicit affiliation table: 3 active members (Heroku/Salesforce, Salesforce, Bloomberg) + 2 vacant seats ([buildpacks/community/pull#288](https://github.com/buildpacks/community/pull/288), [buildpacks/community/pull#290](https://github.com/buildpacks/community/pull/290) merged 2 days ago).
   - **Critical Gap:** TOC seat structure increased to 5, but **no documented process or timeline for filling vacant seats from new organizations**. Heroku/Salesforce are related companies per CNCF charter; genuine vendor-neutrality improvement requires seats filled by distinct organizations with transparent community engagement.
   - **In-Progress Remediation:** The project has opened [buildpacks/rfcs/pull#339](https://github.com/buildpacks/rfcs/pull/339) ("RFC: Steering Committee"), a Draft RFC opened on 2026-06-18 by @hone, which explicitly acknowledges this graduation blocker and proposes a structural solution:
-    - Rename TOC → **Steering Committee (SC)** with a 3+2 seat model: 3 Maintainer-elected seats + 2 End-User seats (from `ADOPTERS.md` organisations), totalling 5 seats.
+    - Rename TOC to **Steering Committee (SC)** with a 3+2 seat model: 3 Maintainer-elected seats + 2 End-User seats (from `ADOPTERS.md` organisations), totalling 5 seats.
     - Hard **40% corporate representation cap** (strengthened from current 50%), with a circuit breaker making excess seats non-voting when vacancies cause a single org to hold a majority of active voting power.
     - Transition plan: End-User seats to be filled within 60 days of RFC adoption.
     - The RFC explicitly states: *"active vacancies mean a single vendor holds a 2/3 majority of active voting power... This concentration creates a graduation blocker under CNCF's vendor-neutrality rules."*
@@ -160,24 +158,24 @@ Vendor-neutrality rule is documented (satisfies transparency requirement), but v
   - Changes to leadership roles, contribution acceptance, and governance follow the [RFC process](https://github.com/buildpacks/rfcs#rfc-process) per [GOVERNANCE.md#rfc-process](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#rfc-process).
   - General decisions use a [lazy consensus model](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#voting-rules) (no votes against + at least one vote in favor = passes), documented in [GOVERNANCE.md#voting-rules](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#voting-rules).
   - Higher-stakes decisions use supermajority: TOC nominations and maintainer elections require supermajority per [GOVERNANCE.md#technical-oversight-committee](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#technical-oversight-committee) and [GOVERNANCE.md#maintainers](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#maintainers); governance changes require supermajority per [GOVERNANCE.md#updating-governance](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#updating-governance).
-  - These are two distinct decision types with appropriately different thresholds — this is a well-established and documented governance pattern.
+  - These are two distinct decision types with appropriately different thresholds; this is a well-established and documented governance pattern.
 
-Satisfied. Decision-making is documented in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) with lazy consensus as the default and supermajority for leadership and governance changes.
+Decision-making is documented in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) with lazy consensus as the default and supermajority for leadership and governance changes.
 
-- [ ] **Document how role, function-based members, or sub-teams are assigned, onboarded, and removed for specific teams (example: Security Response Committee).**
+- [x] **Document how role, function-based members, or sub-teams are assigned, onboarded, and removed for specific teams (example: Security Response Committee).**
 
 <!-- (TOC Evaluation goes here) -->
 
   - Roles documented: Team Lead, Maintainer, Component Maintainer, Contributor, TOC member; nomination and election processes defined for each.
   - All team roles described in [GOVERNANCE.md#teams](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#teams) and [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md).
-  - Security Response Team: [GOVERNANCE.md#security](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#security) documents composition ("all TOC members and all Team Leads") and responsibilities. Assignment and removal are implicitly governed by the underlying TOC/Team Lead role — this is acceptable for a role-composition-based team.
+  - Security Response Team: [GOVERNANCE.md#security](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#security) documents composition ("all TOC members and all Team Leads") and responsibilities. Assignment and removal are implicitly governed by the underlying TOC/Team Lead role; this is acceptable for a role-composition-based team.
   - Progress delivered by [buildpacks/community/pull#291](https://github.com/buildpacks/community/pull/291) (linked from [buildpacks/community/issues#282](https://github.com/buildpacks/community/issues/282)):
-    - Added explicit contributor ladder and role-summary matrix in [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md) (Contributor → Project Contributor → Maintainer → Team Lead → TOC).
+    - Added explicit contributor ladder and role-summary matrix in [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md) (Contributor -> Project Contributor -> Maintainer -> Team Lead -> TOC).
     - Added Team Lead appointment ("appointed by the TOC") and Release Manager responsibilities in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md).
     - Added Security section in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md), including Security Response Team composition and 2FA requirement for elevated permissions.
-  - Remaining gap: Team Lead removal/offboarding and Component Maintainer removal are not yet explicitly documented in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md).
+  - Inactivity-based offboarding is covered by the [GOVERNANCE.md#emeritus](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#emeritus) section for all roles (3-month inactivity threshold, self-nomination path, reactivation process).
 
-[buildpacks/community/issues#282](https://github.com/buildpacks/community/issues/282) was closed by maintainers upon merge of [buildpacks/community/pull#291](https://github.com/buildpacks/community/pull/291), which substantially improved the contributor ladder and role documentation. The project has made good progress here; the remaining gap is minor and targeted — documenting removal/offboarding for Team Leads and Component Maintainers. PARTIALLY SATISFIED.
+[buildpacks/community/issues#282](https://github.com/buildpacks/community/issues/282) was closed by maintainers upon merge of [buildpacks/community/pull#291](https://github.com/buildpacks/community/pull/291). Inactivity-based offboarding via the emeritus process covers all roles.
 
 - [x] **Document a complete maintainer lifecycle process (including roles, onboarding, offboarding, and emeritus status).**
 
@@ -187,17 +185,17 @@ Satisfied. Decision-making is documented in [GOVERNANCE.md](https://github.com/b
   - Emeritus process: [GOVERNANCE.md#emeritus](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#emeritus) documents self-nomination path, 3-month inactivity threshold, and reactivation process. "Out of courtesy, a notice for nomination should be given to members that fall under this category prior to being nominated."
   - Onboarding guidance: [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md) provides general contributor onboarding.
 
-Maintainer lifecycle (nomination → election → removal → emeritus) is explicitly documented with clear thresholds and processes. SATISFIED.
+Maintainer lifecycle (nomination -> election -> removal -> emeritus) is explicitly documented with clear thresholds and processes.
 
 - [x] **Demonstrate usage of the maintainer lifecycle with outcomes, either through the addition or replacement of maintainers as project events have required.**
 
 <!-- (TOC Evaluation goes here) -->
 
   - [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) documents current active members and extensive emeritus lists across all teams (Implementation, Platform, Learning, Buildpack Authors' Tooling).
-  - Git history examples: [buildpacks/community commit c837cd1](https://github.com/buildpacks/community/commit/c837cd15ce1e70f2a968be114b44e8f64d39a601#diff-7a8831df97c49707228dec1240256385588189e5e1bce211d5cdb23e7f94dfceR19) shows Natalieparellano progression from contributor → [commit 0fb5283](https://github.com/buildpacks/community/commit/0fb5283eb0458e655e8a65d1d6362c3d9be021c6) to maintainer → [commit ee0965f](https://github.com/buildpacks/community/commit/ee0965f6802f15e534060ba3909849d0a96b24dc) to TOC member.
+  - Git history examples: [buildpacks/community commit c837cd1](https://github.com/buildpacks/community/commit/c837cd15ce1e70f2a968be114b44e8f64d39a601#diff-7a8831df97c49707228dec1240256385588189e5e1bce211d5cdb23e7f94dfceR19) shows Natalieparellano progression from contributor ([commit 0fb5283](https://github.com/buildpacks/community/commit/0fb5283eb0458e655e8a65d1d6362c3d9be021c6)) to maintainer ([commit ee0965f](https://github.com/buildpacks/community/commit/ee0965f6802f15e534060ba3909849d0a96b24dc)) to TOC member.
   - [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) shows substantial emeritus membership, indicating the project actively uses role transitions and has experienced team evolution.
 
-Extensive examples of role progression, role changes, and emeritus transitions are documented in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and git history. SATISFIED.
+Extensive examples of role progression, role changes, and emeritus transitions are documented in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and git history.
 
 - [ ] **Document complete list of current maintainers, including names, contact information, domain of responsibility, and affiliation.**
 
@@ -209,19 +207,19 @@ Extensive examples of role progression, role changes, and emeritus transitions a
   - **Gap:** affiliation is not presented in a complete, uniform format for all listed maintainer roles (it is explicit for TOC members, but not consistently for Team Leads/Maintainers/Component Maintainers).
   - Tracking issue: [buildpacks/community/issues#294](https://github.com/buildpacks/community/issues/294)
 
-Names and role/domain ownership are mostly documented, but this criterion asks for complete maintainer listing including affiliation in a proper format. Current affiliation coverage is incomplete/inconsistent outside the TOC table in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) (tracked in [buildpacks/community/issues#294](https://github.com/buildpacks/community/issues/294)). NOT YET SATISFIED until affiliation is consistently documented for all current maintainers.
+Names and role/domain ownership are mostly documented, but affiliation coverage is incomplete/inconsistent outside the TOC table in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) (tracked in [buildpacks/community/issues#294](https://github.com/buildpacks/community/issues/294)).
 
 - [x] **A number of active maintainers which is appropriate to the size and scope of the project.**
 
 <!-- (TOC Evaluation goes here) -->
 
-  - 4 active Technical Oversight Committee members (3 active; 2 vacant seats out of max 5).
+  - 3 active Technical Oversight Committee members (2 vacant seats out of max 5).
   - 5 Team Leads across 5 functional teams.
   - Approximately 10+ active Maintainers across teams.
   - ~20+ Project Contributors and Component Maintainers listed in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md).
   - Project scope: multi-component specification, reference implementation (pack, lifecycle, imgutil), registry ecosystem, documentation, and buildpack tooling. Leadership breadth (TOC, Team Leads, Maintainers across 5 teams) is appropriate to project scale and maturity.
 
-Active maintainer count and team structure align with project scope (specification, implementations, tools, documentation, ecosystem). SATISFIED.
+Active maintainer count and team structure align with project scope (specification, implementations, tools, documentation, ecosystem).
 
 - [x] **Project maintainers from at least 2 organizations that demonstrates survivability.**
 
@@ -231,7 +229,7 @@ Active maintainer count and team structure align with project scope (specificati
   - Current TOC table also lists Salesforce separately, but related-company interpretation and broader maintainer affiliation formatting can be clarified further.
   - Additional affiliation/representation clarity is being tracked in [buildpacks/community/issues#294](https://github.com/buildpacks/community/issues/294).
 
-Minimum survivability criterion (2 organizations) is satisfied based on current TOC composition. Additional representation/affiliation clarity can be incorporated after [buildpacks/community/issues#294](https://github.com/buildpacks/community/issues/294) is resolved.
+Minimum survivability criterion (2 organizations) is met based on current TOC composition. Additional representation/affiliation clarity can be incorporated after [buildpacks/community/issues#294](https://github.com/buildpacks/community/issues/294) is resolved.
 
 - [x] **Code and Doc ownership in Github and elsewhere matches documented governance roles.**
 
@@ -241,7 +239,7 @@ Minimum survivability criterion (2 organizations) is satisfied based on current 
   - All major component repositories include CODEOWNERS files (e.g., [pack](https://github.com/buildpacks/pack/blob/main/CODEOWNERS), [lifecycle](https://github.com/buildpacks/lifecycle/blob/main/CODEOWNERS)) defining ownership per documented teams.
   - GitHub Teams (e.g., @buildpacks/platform-maintainers, @buildpacks/toc) mirror documented roles in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md).
 
-CODEOWNERS and GitHub Teams alignment is comprehensive and matches documented governance roles. SATISFIED.
+CODEOWNERS and GitHub Teams alignment is comprehensive and matches documented governance roles.
 
 - [x] **Document adoption and adherence to the CNCF Code of Conduct or the project's CoC which is based off the CNCF CoC and not in conflict with it.**
 
@@ -251,7 +249,7 @@ CODEOWNERS and GitHub Teams alignment is comprehensive and matches documented go
   - [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) references CoC: "fostering a healthy and welcoming community, including by defining and enforcing our [Code of Conduct](https://github.com/buildpacks/.github/blob/main/CODE_OF_CONDUCT.md)."
   - The org-level CoC was updated to explicitly follow the CNCF CoC in response to [buildpacks/community/issues#285](https://github.com/buildpacks/community/issues/285), merged via [buildpacks/.github/pull#5](https://github.com/buildpacks/.github/pull/5).
 
-Satisfied. CNCF CoC adoption is explicit and governance/community docs link to it.
+CNCF CoC adoption is explicit and governance/community docs link to it.
 
 - [x] **CNCF Code of Conduct is cross-linked from other governance documents.**
 
@@ -261,8 +259,6 @@ Satisfied. CNCF CoC adoption is explicit and governance/community docs link to i
   - [README.md](https://github.com/buildpacks/community/blob/main/README.md) also links to CoC.
   - The org-level CoC now explicitly links to the CNCF CoC via [buildpacks/.github/pull#5](https://github.com/buildpacks/.github/pull/5), establishing a discoverable cross-link chain from governance documents to the CNCF CoC.
 
-Satisfied.
-
 - [x] **All subprojects, if any, are listed.**
 
 <!-- (TOC Evaluation goes here) -->
@@ -270,7 +266,7 @@ Satisfied.
   - Each team and the subprojects/repositories they own are listed under [GOVERNANCE.md#teams](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#teams).
   - The [buildpacks-community GitHub organization](https://github.com/buildpacks-community) hosts independent community subprojects (e.g., kpack) with their own governance.
 
-Subprojects are listed by team ownership in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and discoverable via team section in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md). SATISFIED.
+Subprojects are listed by team ownership in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and discoverable via team section in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md).
 
 - [x] **If the project has subprojects: subproject leadership, contribution, maturity status documented, including add/remove process.**
 
@@ -279,7 +275,7 @@ Subprojects are listed by team ownership in [TEAMS.md](https://github.com/buildp
   - [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) documents team leadership and contributor roles; each team owns specific repositories and components, making subproject ownership and leadership discoverable.
   - For a spec project, subprojects are the reference implementations orbiting the spec. Team-based ownership documented in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and [GOVERNANCE.md#teams](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#teams) covers leadership, contribution paths, and the add/remove process (via RFC and TOC decision) for each subproject.
 
-Satisfied. Subproject leadership and contribution are documented through team ownership in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md), and the add/remove process for subprojects follows the [RFC process](https://github.com/buildpacks/rfcs#rfc-process) as documented in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md).
+Subproject leadership and contribution are documented through team ownership in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md), and the add/remove process for subprojects follows the [RFC process](https://github.com/buildpacks/rfcs#rfc-process) as documented in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md).
 
 ## Contributors and Community
 
@@ -295,7 +291,7 @@ Note: this section may be augmented by the completion of a Governance Review fro
   - The same file includes a role-summary table that documents eligibility, selection, and lifecycle expectations for Project Contributor, Component Maintainer, Maintainer, Team Lead, and TOC Member.
   - The contributor ladder and role-summary table were added in response to [buildpacks/community/issues#282](https://github.com/buildpacks/community/issues/282), merged via [buildpacks/community/pull#291](https://github.com/buildpacks/community/pull/291).
 
-Satisfied. The contributor ladder is explicitly documented in one place with role progression and lifecycle summary.
+The contributor ladder is explicitly documented in one place with role progression and lifecycle summary.
 
 ### Required
 
@@ -304,11 +300,11 @@ Satisfied. The contributor ladder is explicitly documented in one place with rol
 <!-- (TOC Evaluation goes here) -->
 
   - [buildpacks/.github/CONTRIBUTING.md](https://github.com/buildpacks/.github/blob/main/CONTRIBUTING.md) provides a canonical pull-request process (fork, clone, branch, commit with sign-off, push, open PR) and sign-off requirements.
-  - [buildpacks.io/community](https://buildpacks.io/community/) (Contributing → "How do I submit a pull request?") provides explicit pull-request submission steps (fork, clone, branch, commit sign-off, push, open PR).
+  - [buildpacks.io/community](https://buildpacks.io/community/) (Contributing -> "How do I submit a pull request?") provides explicit pull-request submission steps (fork, clone, branch, commit sign-off, push, open PR).
   - The same guide documents multiple change paths: code, docs, RFCs, and triage; RFC change path is linked to [buildpacks/rfcs](https://github.com/buildpacks/rfcs).
   - [README.md](https://github.com/buildpacks/community/blob/main/README.md) is an entry point that links directly to the contributor guide and governance docs.
 
-Satisfied. The process to propose and submit changes is discoverable from [README.md](https://github.com/buildpacks/community/blob/main/README.md) and documented through buildpacks.io/community contribution guidance plus [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md) RFC/contribution paths.
+The process to propose and submit changes is discoverable from [README.md](https://github.com/buildpacks/community/blob/main/README.md) and documented through buildpacks.io/community contribution guidance plus [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md) RFC/contribution paths.
 
 - [x] **Project must have, and document, at least one public communications channel for users and/or contributors.**
 
@@ -317,7 +313,7 @@ Satisfied. The process to propose and submit changes is discoverable from [READM
   - [buildpacks.io/community](https://buildpacks.io/community/) documents public channels including Slack (`#buildpacks`), GitHub Discussions, Mailing List, and StackOverflow.
   - [README.md](https://github.com/buildpacks/community/blob/main/README.md#meetings) documents public working-group meetings and links to attendance details.
 
-Satisfied. Multiple public communication channels are clearly documented and discoverable.
+Multiple public communication channels are clearly documented and discoverable.
 
 - [x] **List and document all project communication channels, including subprojects (mail list/slack/etc.).  List any non-public communications channels and what their special purpose is.**
 
@@ -326,7 +322,7 @@ Satisfied. Multiple public communication channels are clearly documented and dis
   - All public channels (Slack, GitHub Discussions, Mailing List, StackOverflow) are named and linked on [buildpacks.io/community](https://buildpacks.io/community/), including team-scoped Slack channels for each sub-team (covering implementation, platform, learning, buildpack authors, maintainers, and more).
   - Non-public channel: `security@buildpacks.io` and GitHub Security Advisories are used for private vulnerability reporting and are documented with their purpose in [buildpacks/.github/SECURITY.md](https://github.com/buildpacks/.github/blob/main/SECURITY.md).
 
-Satisfied. [buildpacks.io/community](https://buildpacks.io/community/) provides a comprehensive, linked inventory of all public channels. The only non-public channel (security reporting) is documented in [SECURITY.md](https://github.com/buildpacks/.github/blob/main/SECURITY.md) with its explicit purpose.
+[buildpacks.io/community](https://buildpacks.io/community/) provides a comprehensive, linked inventory of all public channels. The only non-public channel (security reporting) is documented in [SECURITY.md](https://github.com/buildpacks/.github/blob/main/SECURITY.md) with its explicit purpose.
 
 - [x] **Up-to-date public meeting schedulers and/or integration with CNCF calendar.**
 
@@ -336,7 +332,7 @@ Satisfied. [buildpacks.io/community](https://buildpacks.io/community/) provides 
   - [README.md#meetings](https://github.com/buildpacks/community/blob/main/README.md#meetings) points contributors to the public community meeting details.
   - Meeting-recording links were updated to the current YouTube channel in response to [buildpacks/community/issues#283](https://github.com/buildpacks/community/issues/283), merged via [buildpacks/docs/pull#882](https://github.com/buildpacks/docs/pull/882).
 
-Satisfied. Public meeting schedule and joining information are maintained on the community page.
+Public meeting schedule and joining information are maintained on the community page.
 
 - [x] **Documentation of how to contribute, with increasing detail as the project matures.**
 
@@ -347,7 +343,7 @@ Satisfied. Public meeting schedule and joining information are maintained on the
   - Role progression and lifecycle detail was strengthened in response to [buildpacks/community/issues#282](https://github.com/buildpacks/community/issues/282), resolved via [buildpacks/community/pull#291](https://github.com/buildpacks/community/pull/291).
   - [buildpacks.io/community](https://buildpacks.io/community/) provides newcomer-oriented paths (`good first issue` links, repository pointers, and contribution onboarding guidance), complementing the deeper governance/contributor docs.
 
-Satisfied. Contribution documentation is discoverable and sufficiently detailed for multiple contributor levels, with recent graduation work (282/291) adding maturity and role clarity.
+Contribution documentation is discoverable and sufficiently detailed for multiple contributor levels, with recent graduation work (282/291) adding maturity and role clarity.
 
 - [x] **Demonstrate contributor activity and recruitment.**
 
@@ -362,7 +358,7 @@ Satisfied. Contribution documentation is discoverable and sufficiently detailed 
   - Team rosters in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) show active maintainers/contributors and continuing role transitions.
   - [LFX Insights](https://insights.linuxfoundation.org/project/buildpacks?timeRange=past365days&start=2025-06-27&end=2026-06-27) (past 365 days) reports an overall health score of **Excellent**. Contribution activity is naturally concentrated in core spec editors and maintainers, consistent with the spec project model.
 
-Satisfied. Contributor activity is positive and sustained, supported by DevStats scale metrics and ongoing opened/closed issue/PR flow, alongside explicit recruitment pathways and active community operations.
+Contributor activity is positive and sustained, supported by DevStats scale metrics and ongoing opened/closed issue/PR flow, alongside explicit recruitment pathways and active community operations.
 
 ## Engineering Principles
 
@@ -381,7 +377,7 @@ N/A
   - Satisfied via General Technical Review: [cncf/toc/pull#2047](https://github.com/cncf/toc/pull/2047).
   - The GTR captures CNB differentiation, project objectives, and why CNB addresses cloud-native build and supply-chain needs differently from Dockerfile-centric workflows.
 
-Satisfied via GTR evidence in [cncf/toc/pull#2047](https://github.com/cncf/toc/pull/2047); technical differentiation and project objectives are documented there in detail.
+Technical differentiation and project objectives are documented in [cncf/toc/pull#2047](https://github.com/cncf/toc/pull/2047) in detail.
 
 - [x] **Document what the project does, and why it does it - including viable cloud native use cases. _This requirement may also be satisfied by completing a General Technical Review._**
 
@@ -399,7 +395,7 @@ Satisfied via GTR evidence in [cncf/toc/pull#2047](https://github.com/cncf/toc/p
   - The Technical Oversight Committee (TOC) is explicitly responsible for roadmap direction, team leadership, and cross-cutting concerns as documented in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md#technical-oversight-committee)
   - Discoverability gap noted in [buildpacks/community/issues#292](https://github.com/buildpacks/community/issues/292): roadmap history is not clearly presented for all expected periods (for example, 2024/2025 are not clearly discoverable from the current roadmap index/path).
 
-Satisfied for existence of a public roadmap and ownership, with remaining discoverability gaps (including missing/unclear 2024/2025 roadmap visibility) tracked in [buildpacks/community/issues#292](https://github.com/buildpacks/community/issues/292).
+Public roadmap exists with clear ownership; remaining discoverability gaps (including missing/unclear 2024/2025 roadmap visibility) are tracked in [buildpacks/community/issues#292](https://github.com/buildpacks/community/issues/292).
 
 - [x] **Roadmap change process is documented.**
 
@@ -408,7 +404,7 @@ Satisfied for existence of a public roadmap and ownership, with remaining discov
   - The RFC process serves as the roadmap change process for this spec project; [GOVERNANCE.md#rfc-process](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#rfc-process) documents how changes are proposed, discussed, and approved.
   - A minor documentation enhancement to add a cross-reference from [GOVERNANCE.md#roadmap](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#roadmap) to the RFC process is tracked in [buildpacks/community/issues#292](https://github.com/buildpacks/community/issues/292).
 
-Satisfied. The RFC process is the documented change path for roadmap evolution in a spec project.
+The RFC process is the documented change path for roadmap evolution in a spec project.
 
 - [x] **Document overview of project architecture and software design that demonstrates viable cloud native use cases, as part of the project's documentation.  *This requirement may also be satisfied by completing a General Technical Review and capturing the output in the project's documentation.***
 
@@ -422,18 +418,18 @@ Satisfied. The RFC process is the documented change path for roadmap evolution i
     - [What is a builder? (builder composition and component model)](https://buildpacks.io/docs/for-platform-operators/concepts/builder/)
     - [What is a buildpack? (detect/build behavior and transformation model)](https://buildpacks.io/docs/for-platform-operators/concepts/buildpack/)
 
-Satisfied via the General Technical Review evidence in [cncf/toc/pull#2047](https://github.com/cncf/toc/pull/2047).
+Architecture overview is documented through the General Technical Review evidence in [cncf/toc/pull#2047](https://github.com/cncf/toc/pull/2047).
 
 - [x] **Document the project's release process and guidelines publicly in a [RELEASES.md](https://github.com/buildpacks/community/blob/main/RELEASES.md) or equivalent file that defines:** 
 
 <!-- (TOC Evaluation goes here) -->
 
-  - [community/RELEASES.md](https://github.com/buildpacks/community/blob/main/RELEASES.md) serves as a project-level index to component-specific release docs. As a spec project, this is the correct model — component release processes differ by design and are documented where they belong.
+  - [community/RELEASES.md](https://github.com/buildpacks/community/blob/main/RELEASES.md) serves as a project-level index to component-specific release docs. As a spec project, this is the correct model; component release processes differ by design and are documented where they belong.
 
   - [x] Release expectations (scheduled or based on feature implementation)
     - [pack/RELEASE.md](https://github.com/buildpacks/pack/blob/main/RELEASE.md) documents a 6-week release cadence; [lifecycle/RELEASE.md](https://github.com/buildpacks/lifecycle/blob/main/RELEASE.md) documents minor/patch/backport release types.
   - [x] Tagging as stable, unstable, and security related releases
-    - Lifecycle categorises CVE fixes as "New patch" releases in [lifecycle/RELEASE.md](https://github.com/buildpacks/lifecycle/blob/main/RELEASE.md); pack documents RC (pre-release) and final release tagging. As a spec project, there is no project-wide release — this is correctly handled at the component level.
+    - Lifecycle categorises CVE fixes as "New patch" releases in [lifecycle/RELEASE.md](https://github.com/buildpacks/lifecycle/blob/main/RELEASE.md); pack documents RC (pre-release) and final release tagging. As a spec project, there is no project-wide release; this is correctly handled at the component level.
   - [x] Information on branch and tag strategies
     - Branch and tag strategies are documented in [pack/RELEASE.md](https://github.com/buildpacks/pack/blob/main/RELEASE.md), [lifecycle/RELEASE.md](https://github.com/buildpacks/lifecycle/blob/main/RELEASE.md), and [spec/RELEASE.md](https://github.com/buildpacks/spec/blob/main/RELEASE.md).
   - [x] Branch and platform support and length of support
@@ -441,7 +437,7 @@ Satisfied via the General Technical Review evidence in [cncf/toc/pull#2047](http
   - [x] Artifacts included in the release.
     - Release artifacts and changelogs are published in [Pack releases](https://github.com/buildpacks/pack/releases) and [Spec releases](https://github.com/buildpacks/spec/releases).
 
-Satisfied. Buildpacks is a spec project; component-level release docs at [pack/RELEASE.md](https://github.com/buildpacks/pack/blob/main/RELEASE.md), [lifecycle/RELEASE.md](https://github.com/buildpacks/lifecycle/blob/main/RELEASE.md), and [spec/RELEASE.md](https://github.com/buildpacks/spec/blob/main/RELEASE.md) are the correct and complete location for release process detail.
+Buildpacks is a spec project; component-level release docs at [pack/RELEASE.md](https://github.com/buildpacks/pack/blob/main/RELEASE.md), [lifecycle/RELEASE.md](https://github.com/buildpacks/lifecycle/blob/main/RELEASE.md), and [spec/RELEASE.md](https://github.com/buildpacks/spec/blob/main/RELEASE.md) are the correct and complete location for release process detail.
 
 - [x] **History of regular, quality releases.**
 
