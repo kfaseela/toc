@@ -360,6 +360,7 @@ Satisfied. Contribution documentation is discoverable and sufficiently detailed 
   - Recruitment signal (separate from total activity): [New Contributors Table](https://buildpacks.devstats.cncf.io/d/52/new-contributors-table?orgId=1&var-period_name=Last%20year&from=now-1y&to=now) shows 18 new contributor entries in the period (or 17 if excluding the `Copilot` entry as potential automation/service account).
   - Recent flow metrics remain active/positive: [Issues Opened/Closed by Repository Group](https://buildpacks.devstats.cncf.io/d/12/issues-opened-closed-by-repository-group?orgId=1) shows non-zero opened and closed issues/PRs with comparable opened vs closed values in the displayed 7-day moving-average view.
   - Team rosters in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) show active maintainers/contributors and continuing role transitions.
+  - [LFX Insights](https://insights.linuxfoundation.org/project/buildpacks?timeRange=past365days&start=2025-06-27&end=2026-06-27) (past 365 days) reports an overall health score of **Excellent**. Contribution activity is naturally concentrated in core spec editors and maintainers, consistent with the spec project model.
 
 Satisfied. Contributor activity is positive and sustained, supported by DevStats scale metrics and ongoing opened/closed issue/PR flow, alongside explicit recruitment pathways and active community operations.
 
