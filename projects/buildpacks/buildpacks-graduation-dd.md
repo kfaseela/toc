@@ -25,9 +25,10 @@
 - **Meeting links** ([#283](https://github.com/buildpacks/community/issues/283)): Stale recording links updated to current YouTube channel. Resolved via [PR#882](https://github.com/buildpacks/docs/pull/882)
 
 **Items pending resolution prior to graduation:**
-- **Vendor-neutrality of project direction**: 2 of 5 TOC seats are vacant, and 2 of 3 active members are from Salesforce/Heroku (related companies per CNCF charter). The project has proactively opened [RFC#339](https://github.com/buildpacks/rfcs/pull/339), proposing a Steering Committee model with a 3+2 seat structure and a hard 40% corporate representation cap. Resolved once the RFC is adopted, implemented, and the new composition satisfies the cap in practice.
-- **Maintainer affiliations** ([#294](https://github.com/buildpacks/community/issues/294)): Affiliation is documented for TOC members but not yet consistently for Team Leads, Maintainers, and Component Maintainers in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md).
+- **Maintainer affiliations** ([#294](https://github.com/buildpacks/community/issues/294)): Affiliation is documented for TOC members but not yet consistently for Team Leads, Maintainers, and Component Maintainers in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md). The project must complete this before graduation.
+
 **Non-blocking recommendations:**
+- **Vendor-neutrality of project direction**: 2 of 5 TOC seats are vacant, and 2 of 3 active members are from Salesforce/Heroku (related companies per CNCF charter). The project has opened [RFC#339](https://github.com/buildpacks/rfcs/pull/339) proposing a Steering Committee model with a 3+2 seat structure and a hard 40% corporate representation cap. Given the spec-project context (broad adoption across 9+ independent platform implementations demonstrates the spec is not being steered in a closed direction), this is treated as a non-blocking recommendation. The project is expected to present a 6-month status update to the TOC on RFC#339 adoption and implementation.
 - Add a cross-reference from [GOVERNANCE.md#roadmap](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#roadmap) to the RFC process to make the roadmap change path more discoverable ([#292](https://github.com/buildpacks/community/issues/292)).
 - **Conformance mechanism documentation**: The project has no standalone conformance test suite; interoperability is enforced through the `lifecycle` reference implementation. The project should explicitly document that `lifecycle` serves as the de facto conformance mechanism for the spec, so implementers have a clear and authoritative reference.
 - **Spec-level security guidance for implementers**: The current security work (third-party audit, SECURITY.md, response process) is implementation-focused. Since the spec involves executing untrusted code (buildpacks run during container builds), the spec should document security considerations for platform implementers: trust boundaries between platform, lifecycle, and buildpack execution; filesystem isolation requirements; and network access controls during builds.
@@ -136,7 +137,7 @@ Governance structure is documented and has evolved to include Team Leads, Specia
 
 [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) and public issue/RFC tracking confirm governance structures are actively used and documented with current practices and personnel.
 
-- [ ] **Governance clearly documents [vendor-neutrality](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) of project direction.**
+- [x] **Governance clearly documents [vendor-neutrality](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) of project direction.**
 
 <!-- (TOC Evaluation goes here) -->
 
@@ -149,7 +150,7 @@ Governance structure is documented and has evolved to include Team Leads, Specia
     - Transition plan: End-User seats to be filled within 60 days of RFC adoption.
     - The RFC explicitly states: *"active vacancies mean a single vendor holds a 2/3 majority of active voting power... This concentration creates a graduation blocker under CNCF's vendor-neutrality rules."*
 
-Vendor-neutrality rule is documented (satisfies transparency requirement), but vacant seats remain unfilled with no recruitment process documented. **BLOCKING**: Project must provide documented TOC recruitment process and timeline for filling seats from additional organizations to demonstrate genuine vendor-neutral governance. NOT SATISFIED pending recruitment process and seat filling. **The blocker can be considered resolved once [buildpacks/rfcs/pull#339](https://github.com/buildpacks/rfcs/pull/339) is accepted, the governance change is implemented, and the new Steering Committee composition demonstrably satisfies the vendor-neutrality cap in practice (i.e., seats are filled and the 40% cap is in effect).**
+Vendor-neutrality rule is documented. The project has opened [buildpacks/rfcs/pull#339](https://github.com/buildpacks/rfcs/pull/339) to address the current concentration of TOC voting power and improve the governance structure. Given the broad adoption of the spec across 9+ independent platform implementations (Google Cloud, Heroku, kpack, GitLab, DigitalOcean, Spring Boot, Dokku, Fly.io, and others), the spec is demonstrably not being steered in a closed direction. Treated as a non-blocking recommendation; the project is expected to present a 6-month status update to the TOC on RFC#339 adoption and the resulting governance composition.
 
 - [x] **Document how the project makes decisions on leadership, contribution acceptance, requests to the CNCF, and changes to governance or project goals.**
 
@@ -207,7 +208,7 @@ Extensive examples of role progression, role changes, and emeritus transitions a
   - **Gap:** affiliation is not presented in a complete, uniform format for all listed maintainer roles (it is explicit for TOC members, but not consistently for Team Leads/Maintainers/Component Maintainers).
   - Tracking issue: [buildpacks/community/issues#294](https://github.com/buildpacks/community/issues/294)
 
-Names and role/domain ownership are mostly documented, but affiliation coverage is incomplete/inconsistent outside the TOC table in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) (tracked in [buildpacks/community/issues#294](https://github.com/buildpacks/community/issues/294)).
+Names and role/domain ownership are documented in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md). Affiliation coverage is complete for TOC members but inconsistent for Team Leads, Maintainers, and Component Maintainers (tracked in [buildpacks/community/issues#294](https://github.com/buildpacks/community/issues/294)). **BLOCKING**: The project must complete affiliation documentation for all roles in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md) prior to graduation. NOT SATISFIED.
 
 - [x] **A number of active maintainers which is appropriate to the size and scope of the project.**
 
