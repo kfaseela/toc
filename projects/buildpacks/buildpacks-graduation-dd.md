@@ -15,6 +15,7 @@
 - [General Technical Review](https://github.com/cncf/toc/pull/2047) completed on 20-Feb-2026, covering architecture, cloud-native use cases, differentiation, and ecosystem integrations.
 - Third-party security audit (OSTIF/Quarkslab) completed, findings published, and all moderate/low findings tracked to resolution in specific pack and lifecycle milestones.
 - Four production adopter interviews (Google, Salesforce, Rapid7, 7SIGNAL) confirm graduation-level usage across diverse industries at meaningful scale since 2020–2022.
+- The spec has 9+ independent platform implementations (Google Cloud, Heroku, kpack, GitLab, DigitalOcean, Spring Boot, Dokku, Fly.io, and more), demonstrating broad adoption and real-world interoperability. The RFC process (341+ RFCs, mature FCP process, supermajority voting) reflects a well-established and community-driven approach to spec evolution.
 
 **Items raised and resolved during review:**
 - **Contributor ladder** ([#282](https://github.com/buildpacks/community/issues/282)): Added explicit contributor ladder and role-summary table to [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md); updated [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md) with Team Lead appointment, Security Response Team composition, and 2FA requirement. → [PR#291](https://github.com/buildpacks/community/pull/291)
@@ -28,8 +29,10 @@
 - **Maintainer affiliations** ([#294](https://github.com/buildpacks/community/issues/294)): Affiliation is documented for TOC members but not yet consistently for Team Leads, Maintainers, and Component Maintainers in [TEAMS.md](https://github.com/buildpacks/community/blob/main/TEAMS.md).
 - **Role offboarding documentation**: Appointment processes for Team Leads and Component Maintainers are documented; the corresponding removal/offboarding steps are not yet captured in [GOVERNANCE.md](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md).
 
-**Non-blocking recommendation:**
+**Non-blocking recommendations:**
 - Add a cross-reference from [GOVERNANCE.md#roadmap](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#roadmap) to the RFC process to make the roadmap change path more discoverable ([#292](https://github.com/buildpacks/community/issues/292)).
+- **Conformance mechanism documentation**: The project has no standalone conformance test suite; interoperability is enforced through the `lifecycle` reference implementation. The project should explicitly document that `lifecycle` serves as the de facto conformance mechanism for the spec, so implementers have a clear and authoritative reference.
+- **Spec-level security guidance for implementers**: The current security work (third-party audit, SECURITY.md, response process) is implementation-focused. Since the spec involves executing untrusted code (buildpacks run during container builds), the spec should document security considerations for platform implementers — trust boundaries between platform, lifecycle, and buildpack execution; filesystem isolation requirements; and network access controls during builds.
 
 ### Adoption Evaluation
 
