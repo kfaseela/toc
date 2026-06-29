@@ -2,15 +2,13 @@
 
 - Link to [cncf/toc/issues#1538](https://github.com/cncf/toc/issues/1538)
 
-<!-- This template provides the TOC with the outline for completing due diligence of a project to move levels. This universal template is designed to capture all criteria so the TOC may ensure prior level criteria do not regress. As part of completing the due diligence, the TOC member should update the template to convey the level the project applied for the criteria by bolding the level indicated where the criteria is relevant. -->
-
 ## Graduation Evaluation Summary for Buildpacks
 
 ### Criteria Evaluation
 
-[Faseela K](https://github.com/kfaseela) conducted the due diligence of Cloud Native Buildpacks (CNB) who applied for Graduation. The project has completed the majority of criteria demonstrating maturity at the Graduation level. A small number of items remain in progress and are expected to be resolved ahead of the public comment period.
+[Faseela K](https://github.com/kfaseela) conducted the due diligence of Cloud Native Buildpacks (CNB) who applied for Graduation. The project has completed the criteria that show its maturity at the level of Graduation.
 
-**Noteworthy implementations:**
+The following criteria implementations are noteworthy to call out:
 - CNB is a specification-first project (Platform API, Buildpack API) with reference implementations (lifecycle, pack), driving adoption across cloud providers, CI/CD platforms, and enterprise developer platforms.
 - [General Technical Review](https://github.com/cncf/toc/pull/2047) completed on 20-Feb-2026, covering architecture, cloud-native use cases, differentiation, and ecosystem integrations.
 - Third-party security audit (OSTIF/Quarkslab) completed, findings published, and all moderate/low findings tracked to resolution in specific pack and lifecycle milestones.
@@ -26,18 +24,22 @@
 - **Maintainer affiliations** ([#294](https://github.com/buildpacks/community/issues/294)): Affiliation was documented for TOC members but not consistently for Team Leads, Maintainers, and Component Maintainers. Resolved via [PR#301](https://github.com/buildpacks/community/pull/301): all team listings converted to Markdown tables with an explicit Organization column.
 
 **Non-blocking recommendations:**
-- **Vendor-neutrality of project direction**: 2 of 5 TOC seats are vacant, and 2 of 3 active members are from Salesforce/Heroku (related companies per CNCF charter). The project has opened [RFC#339](https://github.com/buildpacks/rfcs/pull/339) proposing a Steering Committee model with a 3+2 seat structure and a hard 40% corporate representation cap. Given the spec-project context (broad adoption across 9+ independent platform implementations demonstrates the spec is not being steered in a closed direction), this is treated as a non-blocking recommendation. It is worth noting that unlike pure spec projects (e.g., in-toto, TUF), Buildpacks also controls the reference implementation (`lifecycle`), which is the de facto conformance mechanism for the spec, making the concentration of TOC voting power more significant in practice. RFC#339 adoption is therefore particularly important and the project is expected to present a 6-month status update to the TOC on its adoption and implementation.
+- **Vendor-neutrality of project direction**: 2 of 5 TOC seats are vacant, and 2 of 3 active members are from Salesforce/Heroku (related companies per CNCF charter). The project has opened [RFC#339](https://github.com/buildpacks/rfcs/pull/339) proposing a Steering Committee model with a 3+2 seat structure and a hard 40% corporate representation cap. Given the spec-project context (broad adoption across 9+ independent platform implementations demonstrates the spec is not being steered in a closed direction), this is treated as a non-blocking recommendation. Unlike pure spec projects (e.g., in-toto, TUF), Buildpacks also controls the reference implementation (`lifecycle`), which is the de facto conformance mechanism for the spec, making the concentration of TOC voting power more significant in practice. RFC#339 adoption is therefore particularly important and the project is expected to present a 6-month status update to the TOC on its adoption and implementation.
 - Add a cross-reference from [GOVERNANCE.md#roadmap](https://github.com/buildpacks/community/blob/main/GOVERNANCE.md#roadmap) to the RFC process to make the roadmap change path more discoverable ([#292](https://github.com/buildpacks/community/issues/292)).
 - **Conformance mechanism documentation** ([#299](https://github.com/buildpacks/community/issues/299)): The project has no standalone conformance test suite; interoperability is enforced through the `lifecycle` reference implementation. It is recommended to explicitly document that `lifecycle` serves as the de facto conformance mechanism for the spec, giving implementers a clear and authoritative reference.
 - **Spec-level security guidance for implementers** ([#300](https://github.com/buildpacks/community/issues/300)): The current security work (third-party audit, SECURITY.md, response process) is implementation-focused. Since the spec involves executing untrusted code (buildpacks run during container builds), it is recommended to add spec-level security considerations for platform implementers: trust boundaries between platform, lifecycle, and buildpack execution; filesystem isolation requirements; and network access controls during builds.
 
 ### Adoption Evaluation
 
-_The adopter interviews reflect a project [in use/too early] for the level which the project applied. They show ... $INTERVIEWSUMMARY._
+The adopter interviews confirm Cloud Native Buildpacks is in active production use at graduation maturity. Four adopters were interviewed (Google, Salesforce, Rapid7, and 7SIGNAL), spanning cloud platforms, enterprise software, cybersecurity, and SaaS. All four report production usage at meaningful scale since 2020–2022, with Buildpacks serving as a core part of their container build and delivery workflows. Common themes across interviews include reproducible builds, reduced operational burden compared to Dockerfile-centric approaches, security benefits from rebasing and standardized base images, and positive engagement with the maintainer community. Detailed summaries are in the [Adoption](#adoption) section below.
 
 ### Final Assessment
 
-_[The TOC has found the project to have satisfied the criteria for $LEVEL/ The TOC's evaluation of the project shows a needed focus to complete the outstanding blockers and reapply when the following conditions are met ... $CONDITIONS]._
+The TOC has found the project to have satisfied the criteria for Graduation. The TOC requests the project meet with the TOC in 6 months to present a status update on the non-blocking recommendations raised during this review. At that time the TOC would like to see:
+
+- Progress on [RFC#339](https://github.com/buildpacks/rfcs/pull/339) (Steering Committee model with strengthened vendor-neutrality and end-user representation), including adoption timeline and any governance changes implemented.
+- A plan or progress toward explicitly documenting the conformance mechanism for the spec ([#299](https://github.com/buildpacks/community/issues/299)).
+- A plan or progress toward adding spec-level security guidance for platform implementers ([#300](https://github.com/buildpacks/community/issues/300)).
 
 ### Criteria
 
@@ -54,20 +56,19 @@ N/A
 <!-- (TOC Evaluation goes here) -->
 
   - Tech Review request: https://github.com/cncf/toc/issues/1983
-  - Initial version of the graduation Tech Review (GTR): https://github.com/cncf/toc/pull/2047
+  - General Technical Review (GTR): https://github.com/cncf/toc/pull/2047
 
-- [ ]  **All project metadata and resources are [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/).**
+- [x]  **All project metadata and resources are [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/).**
 
 <!-- (TOC Evaluation goes here) -->
 
-Buildpacks operates under vendor-neutral governance guided by its Technical Oversight Committee, and project communication/messaging/collaboration and support resources are vendor-neutral, with the following references:
-- https://github.com/buildpacks/community/blob/main/TEAMS.md#technical-oversight-committee
+Project infrastructure and resources are vendor-neutral: the GitHub org, website, Slack, and communication channels are community-owned and not controlled by any single vendor:
 - GitHub org(s): https://github.com/buildpacks, https://github.com/buildpacks-community
 - Website: https://buildpacks.io/
 - Slack: https://slack.buildpacks.io/
+- TOC structure: https://github.com/buildpacks/community/blob/main/TEAMS.md#technical-oversight-committee
 
-- Vendor-neutrality concern being tracked publicly: https://github.com/buildpacks/community/issues/281
-- Issue #281 was closed pending further progress on vacant seat filling. TOC has requested the maintainers to reopen the issue and link it to the active remediation RFC [buildpacks/rfcs/pull#339](https://github.com/buildpacks/rfcs/pull/339) as the tracked resolution path.
+TOC seat composition is addressed as a non-blocking recommendation; the project has proactively opened [RFC#339](https://github.com/buildpacks/rfcs/pull/339) to restructure governance with a stronger representation cap and end-user seats. See the non-blocking recommendations in the summary and the "Governance clearly documents vendor-neutrality" criterion for full detail.
 
 - [x] **Review and acknowledgement of expectations for [Sandbox](sandbox.cncf.io) projects and requirements for moving forward through the CNCF Maturity levels.**		
 
@@ -245,7 +246,7 @@ Note: this section may be augmented by the completion of a Governance Review fro
 
 <!-- (TOC Evaluation goes here) -->
 
-  - [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md) now includes an explicit contributor ladder diagram and progression path through Team Lead and TOC.
+  - [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md) includes an explicit contributor ladder diagram and progression path through Team Lead and TOC.
   - The same file includes a role-summary table that documents eligibility, selection, and lifecycle expectations for Project Contributor, Component Maintainer, Maintainer, Team Lead, and TOC Member.
   - The contributor ladder and role-summary table were added in response to [buildpacks/community/issues#282](https://github.com/buildpacks/community/issues/282), merged via [buildpacks/community/pull#291](https://github.com/buildpacks/community/pull/291).
 
@@ -299,7 +300,7 @@ Note: this section may be augmented by the completion of a Governance Review fro
   - Recruitment pathways are actively documented: `good first issue` entry points and onboarding guidance on [buildpacks.io/community](https://buildpacks.io/community/), plus role progression in [contributors/guide.md](https://github.com/buildpacks/community/blob/main/contributors/guide.md).
   - Ongoing community activity is visible through recurring public working-group meetings and open discussion channels (Slack, mailing list, GitHub Discussions).
   - [DevStats](https://buildpacks.devstats.cncf.io/) shows sustained activity across commits, PRs, issues, and contributors over the project lifetime, with continued throughput in recent windows. See [Overall Project Statistics](https://buildpacks.devstats.cncf.io/d/18/overall-project-statistics-table?orgId=1), [Developer Activity by Company](https://buildpacks.devstats.cncf.io/d/66/developer-activity-counts-by-companies?orgId=1&var-metric=contributions), [New Contributors](https://buildpacks.devstats.cncf.io/d/52/new-contributors-table?orgId=1&var-period_name=Last%20year&from=now-1y&to=now), and [Issues/PRs flow](https://buildpacks.devstats.cncf.io/d/12/issues-opened-closed-by-repository-group?orgId=1) for current numbers.
-  - [LFX Insights](https://insights.linuxfoundation.org/project/buildpacks?timeRange=past365days&start=2025-06-27&end=2026-06-27) (past 365 days) reports an overall health score of **Excellent**, with active quarterly contributors and healthy retention. Contribution activity is concentrated in a small set of core maintainers and organizations — consistent with the spec project model, and reinforcing the vendor-neutrality recommendations already noted in this review.
+  - [LFX Insights](https://insights.linuxfoundation.org/project/buildpacks?timeRange=past365days&start=2025-06-27&end=2026-06-27) (past 365 days) reports an overall health score of **Excellent**, with active quarterly contributors and healthy retention. Contribution activity is concentrated in a small set of core maintainers and organizations , consistent with the spec project model, and reinforcing the vendor-neutrality recommendations already noted in this review.
 
 Contributor activity is positive and sustained. Exact metrics are best read from DevStats and LFX Insights directly, as they reflect live data.
 
@@ -474,7 +475,6 @@ Buildpacks maintains a public adopters list in the community repository.
 
 Four adopters were interviewed (Google, Salesforce, Rapid7, 7SIGNAL). All four reported production usage at meaningful scale and described Buildpacks as core to container build and delivery workflows.
 
-
 An adopter list was reviewed to verify level-appropriate usage (production use for graduation, dev/test use for incubation).
 
 - [x] **TOC verification of adopters.**
@@ -482,7 +482,6 @@ An adopter list was reviewed to verify level-appropriate usage (production use f
 <!-- (TOC Evaluation goes here) -->
 
 Verification was completed through four adopter interviews and approved summaries captured in this folder.
-
 
 Refer to the Adoption portion of this document.
 
@@ -499,7 +498,7 @@ Buildpacks documentation includes integration guidance for major CNCF and non-CN
 
 #### Adoption
 
-The adopter interviews show Buildpacks is in production use at graduation maturity. Adopters report production-scale usage, measurable operational benefit, and positive maintainer/community engagement.
+The adopter interviews show Buildpacks is in production use at graduation maturity. Adopters report production-scale usage, measurable operational benefit, and positive maintainer/community engagement. The interviews also demonstrate the spec functioning as a genuine standard: Google maintains an independent implementation ([GoogleCloudPlatform/buildpacks](https://github.com/GoogleCloudPlatform/buildpacks)) that tracks the spec directly rather than using the reference implementation, while Rapid7 and others use the reference implementation ecosystem (`pack` CLI, Paketo buildpacks), confirming adoption across both paths.
 
 Common strengths across interviews:
 - Consistent and reproducible source-to-image workflows at scale
