@@ -12,7 +12,7 @@ The following criteria implementations are noteworthy to call out:
 - CNB is a specification-first project (Platform API, Buildpack API) with reference implementations (lifecycle, pack), driving adoption across cloud providers, CI/CD platforms, and enterprise developer platforms.
 - [General Technical Review](https://github.com/cncf/toc/pull/2047) completed on 20-Feb-2026, covering architecture, cloud-native use cases, differentiation, and ecosystem integrations.
 - Third-party security audit (OSTIF/Quarkslab) completed, findings published, and all moderate/low findings tracked to resolution in specific pack and lifecycle milestones.
-- Four production adopter interviews (Google, Salesforce, Rapid7, 7SIGNAL) confirm graduation-level usage across diverse industries at meaningful scale since 2020–2022.
+- Four production adopter interviews (Google, Salesforce, Adopter 3, 7SIGNAL) confirm graduation-level usage across diverse industries at meaningful scale since 2020–2022.
 - The spec has 9+ independent platform implementations (Google Cloud, Heroku, kpack, GitLab, DigitalOcean, Spring Boot, Dokku, Fly.io, and more), demonstrating broad adoption and real-world interoperability. The RFC process (341+ RFCs, mature FCP process, supermajority voting) reflects a well-established and community-driven approach to spec evolution.
 
 **Items raised and resolved during review:**
@@ -31,7 +31,7 @@ The following criteria implementations are noteworthy to call out:
 
 ### Adoption Evaluation
 
-The adopter interviews confirm Cloud Native Buildpacks is in active production use at graduation maturity. Four adopters were interviewed (Google, Salesforce, Rapid7, and 7SIGNAL), spanning cloud platforms, enterprise software, cybersecurity, and SaaS. All four report production usage at meaningful scale since 2020–2022, with Buildpacks serving as a core part of their container build and delivery workflows. Common themes across interviews include reproducible builds, reduced operational burden compared to Dockerfile-centric approaches, security benefits from rebasing and standardized base images, and positive engagement with the maintainer community. Detailed summaries are in the [Adoption](#adoption) section below.
+The adopter interviews confirm Cloud Native Buildpacks is in active production use at graduation maturity. Four adopters were interviewed (Google, Salesforce, Adopter 3, and 7SIGNAL), spanning cloud platforms, enterprise software, cybersecurity, and SaaS. All four report production usage at meaningful scale since 2020–2022, with Buildpacks serving as a core part of their container build and delivery workflows. Common themes across interviews include reproducible builds, reduced operational burden compared to Dockerfile-centric approaches, security benefits from rebasing and standardized base images, and positive engagement with the maintainer community. Detailed summaries are in the [Adoption](#adoption) section below.
 
 Beyond the four interviewed adopters, the [public ADOPTERS.md](https://github.com/buildpacks/community/blob/main/ADOPTERS.md) lists 25+ organizations in production use — a mix of adopters using the CNB reference implementation (`lifecycle`, `pack`) and organizations with their own internal spec-compliant implementations. Among the latter, Google's independent implementation ([GoogleCloudPlatform/buildpacks](https://github.com/GoogleCloudPlatform/buildpacks)), which tracks the spec directly without using the reference lifecycle, is the strongest indicator that CNB functions as a genuine interoperability standard.
 
@@ -475,7 +475,7 @@ Buildpacks maintains a public adopters list in the community repository.
 
 <!-- (TOC Evaluation goes here) -->
 
-Four adopters were interviewed (Google, Salesforce, Rapid7, 7SIGNAL). All four reported production usage at meaningful scale and described Buildpacks as core to container build and delivery workflows.
+Four adopters were interviewed (Google, Salesforce, Adopter 3, 7SIGNAL). All four reported production usage at meaningful scale and described Buildpacks as core to container build and delivery workflows.
 
 An adopter list was reviewed to verify level-appropriate usage (production use for graduation, dev/test use for incubation).
 
@@ -500,7 +500,7 @@ Buildpacks documentation includes integration guidance for major CNCF and non-CN
 
 #### Adoption
 
-The adopter interviews show Buildpacks is in production use at graduation maturity. Adopters report production-scale usage, measurable operational benefit, and positive maintainer/community engagement. The interviews also demonstrate the spec functioning as a genuine standard: Google maintains an independent implementation ([GoogleCloudPlatform/buildpacks](https://github.com/GoogleCloudPlatform/buildpacks)) that tracks the spec directly rather than using the reference implementation, while Rapid7 and others use the reference implementation ecosystem (`pack` CLI, Paketo buildpacks), confirming adoption across both paths.
+The adopter interviews show Buildpacks is in production use at graduation maturity. Adopters report production-scale usage, measurable operational benefit, and positive maintainer/community engagement. The interviews also demonstrate the spec functioning as a genuine standard: Google maintains an independent implementation ([GoogleCloudPlatform/buildpacks](https://github.com/GoogleCloudPlatform/buildpacks)) that tracks the spec directly rather than using the reference implementation, while others use the reference implementation ecosystem (`pack` CLI, Paketo buildpacks), confirming adoption across both paths.
 
 Common strengths across interviews:
 - Consistent and reproducible source-to-image workflows at scale
@@ -529,13 +529,13 @@ Production usage since 2022 in internal CI systems serving a large developer bas
 
 Reference: [Buildpacks Adopter Interview - Salesforce](./buildpacks-adopter-interview-salesforce.md)
 
-##### Adopter 3 - Rapid7 / Cybersecurity
+##### Adopter 3 - Cybersecurity
 
 Interviewed: Jan 2026
 
-Production usage since 2022 across multiple teams. Rapid7 described Buildpacks as a standard container-build path with custom buildpacks/builders where needed, citing security, rebasing, and standardization benefits, plus active community collaboration.
+Production usage since 2022 across multiple teams. Adopter 3 described Buildpacks as a standard container-build path with custom buildpacks/builders where needed, citing security, rebasing, and standardization benefits, plus active community collaboration.
 
-Reference: [Buildpacks Adopter Interview - Rapid7](./buildpacks-adopter-interview-rapid7.md)
+Reference: [Buildpacks Adopter Interview - Adopter 3](./buildpacks-adopter-interview-adopter-3.md)
 
 ##### Adopter 4 - 7SIGNAL / SaaS Network Monitoring
 
