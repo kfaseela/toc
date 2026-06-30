@@ -33,6 +33,8 @@ The following criteria implementations are noteworthy to call out:
 
 The adopter interviews confirm Cloud Native Buildpacks is in active production use at graduation maturity. Four adopters were interviewed (Google, Salesforce, Rapid7, and 7SIGNAL), spanning cloud platforms, enterprise software, cybersecurity, and SaaS. All four report production usage at meaningful scale since 2020–2022, with Buildpacks serving as a core part of their container build and delivery workflows. Common themes across interviews include reproducible builds, reduced operational burden compared to Dockerfile-centric approaches, security benefits from rebasing and standardized base images, and positive engagement with the maintainer community. Detailed summaries are in the [Adoption](#adoption) section below.
 
+Beyond the four interviewed adopters, the [public ADOPTERS.md](https://github.com/buildpacks/community/blob/main/ADOPTERS.md) lists 25+ organizations in production use — a mix of adopters using the CNB reference implementation (`lifecycle`, `pack`) and organizations with their own internal spec-compliant implementations. Among the latter, Google's independent implementation ([GoogleCloudPlatform/buildpacks](https://github.com/GoogleCloudPlatform/buildpacks)), which tracks the spec directly without using the reference lifecycle, is the strongest indicator that CNB functions as a genuine interoperability standard.
+
 ### Final Assessment
 
 The TOC has found the project to have satisfied the criteria for Graduation. The TOC requests the project meet with the TOC in 6 months to present a status update on the non-blocking recommendations raised during this review. At that time the TOC would like to see:
