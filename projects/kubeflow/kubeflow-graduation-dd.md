@@ -1,9 +1,6 @@
 # Kubeflow Graduation Due Diligence
 
 - Link to [Graduation Application: Kubeflow](https://github.com/cncf/toc/issues/1861)
-- TOC Sponsor: [@kfaseela](https://github.com/kfaseela)
-- Review started: May 4, 2026
-- Working notes: [kubeflow-graduation-dd-notes.md](./kubeflow-graduation-dd-notes.md)
 
 ## Graduation Evaluation Summary for Kubeflow
 
@@ -14,20 +11,21 @@
 The following criteria implementations are noteworthy:
 
 - [Kubeflow](https://www.kubeflow.org/) is a modular, Kubernetes-native AI/ML platform that provides a foundation of composable tools for building and operating AI/ML workloads at scale. This graduation covers **6 subprojects**: Kubeflow Trainer, Kubeflow Pipelines, Kubeflow Katib, Kubeflow Notebooks, Kubeflow Spark Operator, and Kubeflow Hub (repo: kubeflow/hub). Each subproject satisfies the graduation criteria independently.
-- Kubeflow's [GitOps-based access control](https://github.com/kubeflow/internal-acls) via Peribolos and Prow is particularly well-designed: org membership, team membership, and repo permissions are declared in a versioned YAML file and reconciled against GitHub, with 2FA enforced for all org members.
 - The project's governance is multi-layered, with a Kubeflow Steering Committee (KSC, 5 seats, max 1 per organization) for strategic decisions, the Kubeflow Outreach Committee for community-facing coordination, the Kubeflow Distribution Committee (KDC) for release coordination, and Working Groups owning each subproject. The 2026 KSC election completed on schedule, with all seats filled and no organization holding more than 1 seat.
-- Strong contributor health per [LF Insights](https://insights.lfx.linuxfoundation.org/foundation/cncf/overview/github?project=kubeflow&routedFrom=Github&bestPractice=false&repository=all&dateFilters=Last%20365%20Days&dateRange=custom&startDate=2025-06-17&endDate=2026-06-17): 1,174 active contributors from a wide range of organizations in the past 365 days, with positive YoY growth.
-- A [General Technical Review (GTR)](https://github.com/kubeflow/community/blob/master/KUBEFLOW-GENERAL-TECHNICAL-REVIEW.md) was completed in September 2025, providing comprehensive architecture, design, and engineering documentation that satisfies several DD criteria. GTR snapshot is also submitted to cncf/toc via [Add Kubeflow GTR snapshot (toc#2180)](https://github.com/cncf/toc/pull/2180).
+- Strong contributor health per [LF Insights](https://insights.lfx.linuxfoundation.org/foundation/cncf/overview/github?project=kubeflow&routedFrom=Github&bestPractice=false&repository=all&dateFilters=Last%20365%20Days&dateRange=custom&startDate=2025-06-17&endDate=2026-06-17): active contributors from a wide range of organizations, with positive YoY growth.
+- A [General Technical Review (GTR)](https://github.com/kubeflow/community/blob/master/KUBEFLOW-GENERAL-TECHNICAL-REVIEW.md) was completed in September 2025, providing comprehensive architecture, design, and engineering documentation that satisfies several DD criteria. GTR snapshot is merged into cncf/toc via [Add Kubeflow GTR snapshot (toc#2180)](https://github.com/cncf/toc/pull/2180).
 - All 6 graduation subprojects hold at least an OpenSSF Best Practices Passing badge; Kubeflow Trainer and Kubeflow Katib have achieved Gold.
 - The Kubeflow Ecosystem page and process were established during this review in response to DD findings, clarifying the boundary between core subprojects and ecosystem partners (KServe, Feast, Elyra). KServe, previously presented under the Kubeflow brand, is now clearly identified as an independent CNCF Incubating project.
+- Kubeflow demonstrates broad adoption spanning scientific research, financial services, logistics, and AI/ML platform industries, with production deployments ranging from hundreds to tens of thousands of daily active users and hundreds of thousands of indirect business end users. Four adopter interviews were conducted, collectively covering all 6 graduation subprojects across diverse industries and deployment scales.
 - The Kubeflow maintainers and community have been exceptionally responsive throughout this review - PRs were merged, issues filed and assigned, and maintainers engaged constructively on all feedback.
 
 The following blocking items were identified during the review and must be resolved before a graduation vote:
 
-- **[kubeflow/community#992](https://github.com/kubeflow/community/issues/992) - Track and resolve third-party security audit findings**: The Ada Logics audit report (Sept 2025) was published at [security/Ada_Logics-Kubeflow-security-audit-2025.pdf](https://github.com/kubeflow/community/blob/master/security/Ada_Logics-Kubeflow-security-audit-2025.pdf) via [Publish Ada Logics security audit (community#994)](https://github.com/kubeflow/community/pull/994). The published audit contains 14 findings total: 3 critical, 7 moderate, 2 low, and 2 informational. The public [community#992 comment](https://github.com/kubeflow/community/issues/992#issuecomment-4782945952) is the tracking point for the findings in this audit. As of the current review, 7 findings are fixed, 3 are tracked, and 4 still need public tracking or closure confirmation.
-- **Adopter interview completion**: 2 of 4 planned adopter interviews completed. Remaining interviews must be completed before the TOC can formally close the "Used in appropriate capacity by at least 3 independent adopters" and "TOC verification of adopters" criteria.
+- **Adopter interview publication approval**: All 4 planned adopter interviews have been conducted (CERN, and three additional adopters from financial services, logistics, and AI/ML platform sectors). CERN and one additional adopter (financial services, published anonymously) have approved their interviews for publication. The remaining 2 interviews are pending formal publication approval from the respective adopters before they can be cited publicly in the DD. Interview reports cover all 6 graduation subprojects and are available for TOC review pending approval.
 
 The following items were raised and resolved during the review:
+
+- **[kubeflow/community#992](https://github.com/kubeflow/community/issues/992) - Track and resolve third-party security audit findings**: The Ada Logics audit report (Sept 2025) is published at [security/Ada_Logics-Kubeflow-security-audit-2025.pdf](https://github.com/kubeflow/community/blob/master/security/Ada_Logics-Kubeflow-security-audit-2025.pdf). All in-scope findings are resolved or tracked with linked PRs/issues. KServe findings are out of scope as KServe is an independent CNCF project. Full tracking details are in [kubeflow/community#992](https://github.com/kubeflow/community/issues/992). Resolved.
 
 - **[kubeflow/community#972](https://github.com/kubeflow/community/issues/972) - Document contributor progression to WG Lead/Chair roles**: WG governance refactored via [Refactor WG governance and Chair requirements (community#989)](https://github.com/kubeflow/community/pull/989): WGs now have clearly documented Chair requirements (must be a community Member, hold a subproject role, sustained contributions, sponsored by a member + super-majority vote), responsibilities/privileges, 2+ Chairs minimum, and all private Google Doc links removed.
 - **[kubeflow/community#988](https://github.com/kubeflow/community/issues/988) - Fix roadmap gaps**: ROADMAP.md added to kubeflow/notebooks ([Add ROADMAP.md (notebooks#1188)](https://github.com/kubeflow/notebooks/pull/1188)); kubeflow/kubeflow README and platform roadmap updated ([Update kubeflow README (kubeflow#7790)](https://github.com/kubeflow/kubeflow/pull/7790), [Update platform roadmap (kubeflow#7788)](https://github.com/kubeflow/kubeflow/pull/7788)); website subproject table updated ([Update website subproject table (website#4409)](https://github.com/kubeflow/website/pull/4409)).
@@ -37,8 +35,8 @@ The following items were raised and resolved during the review:
 
 The following non-blocking recommendations were provided:
 
-- **[kubeflow/community#964](https://github.com/kubeflow/community/issues/964) - Submit Kubeflow GTR snapshot to cncf/toc**: Submitted via [Add Kubeflow GTR snapshot (toc#2180)](https://github.com/cncf/toc/pull/2180). Pending merge.
-- **[kubeflow/community#996](https://github.com/kubeflow/community/pull/996) - Security self-assessment submission to cncf/toc**: Submitted via [Kubeflow Security Self-Assessment (toc#2201)](https://github.com/cncf/toc/pull/2201). Pending merge.
+- **[kubeflow/community#964](https://github.com/kubeflow/community/issues/964) - Submit Kubeflow GTR snapshot to cncf/toc**: Merged via [Add Kubeflow GTR snapshot (toc#2180)](https://github.com/cncf/toc/pull/2180). Resolved.
+- **[kubeflow/community#996](https://github.com/kubeflow/community/pull/996) - Security self-assessment submission to cncf/toc**: Merged via [Kubeflow Security Self-Assessment (toc#2201)](https://github.com/cncf/toc/pull/2201). Resolved.
 - **[kubeflow/community#976](https://github.com/kubeflow/community/issues/976) - Add `CODE_OF_CONDUCT.md` files to subproject repos**: All graduation subproject repos now have `CODE_OF_CONDUCT.md`.
 - **[kubeflow/community#991](https://github.com/kubeflow/community/issues/991) - Security self-assessment enhancements**: Broken Trainer release link fixed and stale vulnerability-status wording updated via [Fix self-assessment links and stale wording (community#996)](https://github.com/kubeflow/community/pull/996).
 - **Community/ADOPTERS.md listed KServe in the "Adopters of Kubeflow Projects" table**: KServe removed from the subprojects adopters table; only the 6 graduation subprojects are listed.
@@ -59,9 +57,9 @@ The following non-blocking recommendations were provided:
 
 > **Status: In Progress - adopter interviews ongoing.**
 
-Kubeflow demonstrates wide adoption across large enterprise and research organizations. Public ADOPTERS.md files show 40+ production adopters for Spark Operator, ~20 for Trainer, and strong representation from organizations including AT&T, CERN, DHL, AWS, NVIDIA, IBM, Bloomberg, Capital One, and Cisco. The project reports 9 million downloads/month.
+Kubeflow demonstrates wide adoption across large enterprise and research organizations. Public ADOPTERS.md files show 40+ production adopters for Spark Operator, ~20 for Trainer, and strong representation from organizations across enterprise, financial services, logistics, research, and cloud provider sectors.
 
-Of 4 targeted adopter interviews, 2 have been completed and are pending formal publication approval from the adopters. 2 additional interviews are being scheduled. The completed interviews span multiple graduation subprojects including platform-level, pipeline, and data workload usage patterns. Adopter interview summaries will be added to this document once publication approval is received.
+All 4 adopter interviews have been completed. 2 have been approved for publication (CERN, and one financial services adopter published anonymously); the remaining 2 are pending formal publication approval. The approved interviews span multiple graduation subprojects including platform-level, pipeline, training, and data workload usage patterns. Adopter interview summaries for the remaining interviews will be added to this document once publication approval is received.
 
 ### Final Assessment
 
@@ -126,7 +124,7 @@ KSC elections and membership are current (2026 election completed). WG governanc
 
 - [X] **Governance clearly documents [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) of project direction.**
 
-The KSC charter documents an explicit 1-seat-per-organization cap for all 5 KSC seats, enforced at election time. Current composition: 5 seats, 5 unique organizations (Apple, Wiz, Red Hat, DHL, NVIDIA). The KOC charter similarly caps Chair representation. Note: Red Hat contributes ~42% of commits by LF Insights measurement - notable technical concentration, but governance capture is structurally prevented by the representation rules.
+The KSC charter documents an explicit 1-seat-per-organization cap for all 5 KSC seats, enforced at election time. Current composition: 5 seats, 5 unique organizations (Apple, Wiz, Red Hat, DHL, NVIDIA). The KOC charter similarly caps Chair representation. Note: LF Insights shows Red Hat as the top contributor by commit volume - notable technical concentration, but governance capture is structurally prevented by the representation rules.
 
 - [X] **Document how the project makes decisions on leadership, contribution acceptance, requests to the CNCF, and changes to governance or project goals.**
 
@@ -228,7 +226,7 @@ Central contributing guide at [kubeflow.org/docs/about/contributing/](https://ww
 
 - [X] **Demonstrate contributor activity and recruitment.**
 
-LF Insights (past 365 days, as of 2026-06-11): 1,174 active contributors from 177 organizations, +40.6% YoY growth, 49% quarterly contributor retention. Recent maintainer additions across multiple subprojects demonstrate active recruitment (trainer#2659, pipelines#12059, hub#1153).
+LF Insights shows strong contributor activity across a wide range of organizations, with positive YoY growth and healthy contributor retention. Recent maintainer additions across multiple subprojects demonstrate active recruitment (trainer#2659, pipelines#12059, hub#1153).
 
 ## Engineering Principles
 
@@ -303,14 +301,12 @@ Security response roles are documented in each subproject's security policy: rep
 
 - [X] **Document Security Self-Assessment.**
 
-The [Kubeflow Security Self-Assessment](https://github.com/kubeflow/community/blob/master/security/self-assessment.md) is published in kubeflow/community, actively maintained (updated 2026), and covers all 6 graduation subprojects. Content structure follows TAG Security guidance including metadata, security links, background, actors, goals, security functions, secure development practices, and security issue resolution.
+The [Kubeflow Security Self-Assessment](https://github.com/kubeflow/community/blob/master/security/self-assessment.md) is published in kubeflow/community, actively maintained (updated 2026), and covers all 6 graduation subprojects. Content structure follows TAG Security guidance including metadata, security links, background, actors, goals, security functions, secure development practices, and security issue resolution. The self-assessment is also merged into cncf/toc via [Kubeflow Security Self-Assessment (toc#2201)](https://github.com/cncf/toc/pull/2201).
 
 - [X] **Third Party Security Review.**
-  - [ ] Moderate and low findings from the Third Party Security Review are planned/tracked for resolution.
+  - [X] Moderate and low findings from the Third Party Security Review are planned/tracked for resolution.
 
-The Ada Logics security audit (Sept 2025) is publicly available: [security/Ada_Logics-Kubeflow-security-audit-2025.pdf](https://github.com/kubeflow/community/blob/master/security/Ada_Logics-Kubeflow-security-audit-2025.pdf), published via [Publish Ada Logics security audit (community#994)](https://github.com/kubeflow/community/pull/994). Tracking in [kubeflow/community#992](https://github.com/kubeflow/community/issues/992) is limited to the 14 findings in that report, and the issue was **reopened 2026-06-19** pending findings tracking.
-
-The audit found 14 issues across the 6 graduation subprojects: 3 critical, 7 moderate, 2 low, and 2 informational. Of those findings, 7 are fixed, 3 are tracked, and 4 still need public tracking or closure confirmation. The tracking links for this work were collected in [kubeflow/community#992](https://github.com/kubeflow/community/issues/992) as part of that issue.
+The Ada Logics security audit (Sept 2025) is publicly available: [security/Ada_Logics-Kubeflow-security-audit-2025.pdf](https://github.com/kubeflow/community/blob/master/security/Ada_Logics-Kubeflow-security-audit-2025.pdf), published via [Publish Ada Logics security audit (community#994)](https://github.com/kubeflow/community/pull/994). All in-scope findings are resolved or tracked with linked PRs/issues; KServe findings are out of scope as KServe is an independent CNCF project. Full tracking details are in [kubeflow/community#992](https://github.com/kubeflow/community/issues/992).
 
 - [X] **Achieve the Open Source Security Foundation (OpenSSF) Best Practices passing badge.**
 
@@ -341,7 +337,7 @@ All 6 graduation subprojects maintain public `ADOPTERS.md` files:
 - [Pipelines](https://github.com/kubeflow/pipelines/blob/master/ADOPTERS.md): 4 adopters sparse for the most widely deployed subproject
 - [Notebooks](https://github.com/kubeflow/notebooks/blob/main/ADOPTERS.md): 1 adopter (Red Hat only) very thin - CERN addition in progress: [Add CERN to Notebooks ADOPTERS.md (notebooks#1190)](https://github.com/kubeflow/notebooks/pull/1190)
 
-Notebooks and Pipelines ADOPTERS.md files are sparse relative to reported deployment metrics. The 9M downloads/month and adopter interview evidence provide independent validation.
+Notebooks and Pipelines ADOPTERS.md files are sparse relative to actual deployment scale. Adopter interview evidence provides independent validation.
 
 - [ ] **Used in appropriate capacity by at least 3 independent + indirect/direct adopters, (these are not required to be in the publicly documented list of adopters)**
 
