@@ -1,14 +1,12 @@
 # Kubeflow Adopter Interview - Adopter 1
 
-> **Status**: Private draft - shared with Adopter 1 representatives for review and approval. Will be updated based on their feedback before any public sharing.
-
 ---
 
 **Organization**: Adopter 1  
 **Industry**: Financial services / banking  
 **Interview Date**: June 10, 2026  
 **Interviewers (TOC)**: Faseela K  
-**Interviewees**: Director of ML Platform, Distinguished Engineer / KFP Maintainer  
+**Interviewees**: Director of ML Platform, Distinguished Engineer  
 
 ---
 
