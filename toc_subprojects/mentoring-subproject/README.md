@@ -3,20 +3,23 @@
 <!-- THIS FILE IS AUTO-GENERATED FROM /tags.yaml -->
 
 ## Mission Statement
-Foo-Baz-Bar
+Encourages cloud native computing adoption by providing opportunities for a diverse group of new contributors to work on CNCF projects with experienced mentorship.
 
 [Charter](./charter.md)
 
 ## Leadership
 ### Chairs
+- Prasanth Baskar (**[@bupd](https://github.com/bupd)**), 8gears
 - Nate Waddington (**[@nate-double-u](https://github.com/nate-double-u)**), The Linux Foundation
+### Tech Leads
+- Calum Murray (**[@Cali0707](https://github.com/Cali0707)**), Red Hat
 
 ## Meetings
 - **Mentoring SubProject Meetings**: [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/toc-mentoring-subproject?view=list) | [Recordings](https://www.youtube.com/@CNCFTOCMentoringSubProject)
 
 ## Contact
 - Slack: [Tag Mentoring SubProject Slack](https://cloud-native.slack.com/archives/CGPK98JNQ)
-- [Mailing List](https://lists.cncf.io/g/tag-cs-mentoring-wg)
+- [Mailing List]()
 
 ## Initiatives
 [Mentoring SubProject Initiatives](https://github.com/cncf/toc/issues?q=is%3Aopen%20label%3Akind%2Finitiative%20label%3Asub%2Fmentoring)
