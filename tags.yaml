@@ -655,7 +655,7 @@ toc_subprojects: # TOC SubProjects
         tag_calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/toc-mentoring-subproject?view=list
         recordings_url: https://www.youtube.com/@CNCFTOCMentoringSubProject
     contact:
-      slack: CGPK98JNQ
+      slack: C09C9EGPJAC # toc-mentoring-subproject
       mailing_list:
   #    toc_liaison:
   #      - github: foobar
