@@ -18,7 +18,7 @@ Encourages cloud native computing adoption by providing opportunities for a dive
 - **Mentoring SubProject Meetings**: [Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/toc-mentoring-subproject?view=list) | [Recordings](https://www.youtube.com/@CNCFTOCMentoringSubProject)
 
 ## Contact
-- Slack: [TOC Mentoring SubProject Slack](https://cloud-native.slack.com/archives/C09C9EGPJAC)
+- Slack: [Tag Mentoring SubProject Slack](https://cloud-native.slack.com/archives/C09C9EGPJAC)
 - [Mailing List](https://lists.cncf.io/g/tag-cs-mentoring-wg)
 
 ## Initiatives
