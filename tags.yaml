@@ -656,7 +656,7 @@ toc_subprojects: # TOC SubProjects
         recordings_url: https://www.youtube.com/@CNCFTOCMentoringSubProject
     contact:
       slack: C09C9EGPJAC # toc-mentoring-subproject
-      mailing_list:
+      mailing_list: https://lists.cncf.io/g/tag-cs-mentoring-wg
   #    toc_liaison:
   #      - github: foobar
   #        name: Foo Bar
