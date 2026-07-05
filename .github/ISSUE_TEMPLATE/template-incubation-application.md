@@ -18,7 +18,8 @@ This template provides the project with a framework to inform the TOC of their c
 
 Project Repo(s): $URL
 Project Site:  $URL
-Sub-Projects: $LIST
+Sub-Projects: $LIST _(If none, confirm that no repos under your org share ≥3 maintainers with another CNCF project.)_
+Related Projects: $LIST _(List any projects you or your core maintainers operate in other foundations (Linux Foundation, Apache, Eclipse, etc.) that are technically related to this project. Include: project name, foundation, and relationship.)_
 Communication: $SLACK
 
 Project points of contacts: $NAME, $EMAIL
@@ -36,6 +37,9 @@ Project points of contacts: $NAME, $EMAIL
 
 _The project has been adopted by the following organizations in a testing and integration or production capacity:_
 * 
+
+**Adopter Interviews:** Submit 5-7 adopters via the [Adopter Interview Questionnaire](https://docs.google.com/forms/d/1n1oLC6IKj5-7S_xeEjIdEjbtS9SWniuAo7IIOyLFuK8/edit) prior to DD assignment. See the [definition of an adopter](https://github.com/cncf/toc/blob/main/FAQ.md#what-is-the-definition-of-an-adopter) for guidance on who qualifies.
+
 
 ## Application Process Principles
 
@@ -240,7 +244,7 @@ Note: this section may be augmented by a joint-assessment performed by TAG Secur
 
 <!-- (Project assertion goes here) --> 
 
-- [ ] **Document assignment of security response roles and how reports are handled.**
+- [ ] **Document assignment of security response roles and how reports are handled.** _(This is distinct from the security reporting process above — document who is responsible for triaging and responding to reports, not just where to send them.)_
 
 <!-- (Project assertion goes here) --> 
 
@@ -248,7 +252,7 @@ Note: this section may be augmented by a joint-assessment performed by TAG Secur
 
 <!-- (Project assertion goes here) --> 
 
-- [ ] **Achieve the Open Source Security Foundation (OpenSSF) Best Practices passing badge.**
+- [ ] **Achieve the [Open Source Security Foundation (OpenSSF) Best Practices passing badge](https://www.bestpractices.dev/).** _(Link to your bestpractices.dev project page below.)_
 
 <!-- (Project assertion goes here) --> 
 
