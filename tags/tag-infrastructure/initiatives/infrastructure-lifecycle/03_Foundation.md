@@ -49,7 +49,7 @@ When infrastructure is managed with on-demand solutions like scripts, either man
 
 On-demand operations can also be more complex than a continuously reconciled one. Managing imperative pipelines and scripts can quickly grow out of proportion, putting cognitive load on the operator. The agents, Kubernetes controllers or operators, are usually singletons used for specific parts of the operation. This can result in a more stable architecture, with fewer variables and less bespoke solutions.
 
-You might think of them in different terms like “push versus pull” or “pipelines” versus controllers. Neither is wrong, and they both have their benefits and disadvantages. You can also opt for a hybrid approach, where certain parts of the system are reconciled continuously, while others are not.
+In different terms, this can be described as “push versus pull” or “pipelines” versus controllers. Neither is wrong, and both have their benefits and disadvantages. There is also the option to go for a hybrid approach, where certain parts of the system are reconciled continuously, while others are not.
 
 ## DSL vs. Programming Language
 
