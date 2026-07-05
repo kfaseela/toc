@@ -43,7 +43,7 @@ implemented in an easier way.
 
 ## On-Demand vs. Continuously Reconciled
 
-These are two paradigms in lifecycle management that are fundamental opposites. On the one side, you have changes that are triggered by a person or external system, the other is where the system itself can reconcile any changes by observing a source. The first can be done through a portal, CLI, or scripts, while the other requires that you install and maintain a set of agents whose behavior is defined by configuration or policy.
+These are two paradigms in lifecycle management that are fundamental opposites. On the one side, changes can be triggered by a person or external system, the other is where the system itself can reconcile any changes by observing a source. The first can be done through a portal, CLI, or scripts, while the other requires that you install and maintain a set of agents whose behavior is defined by configuration or policy.
 
 When you manage infrastructure with on-demand solutions like scripts, either manually run or through an automation pipeline, one of the benefits is that you get immediate feedback. With a reconciliation process, you rely on eventual consistency, which requires all changes to happen at the source. The GitOps principles call this the “desired state” and it should always be what the system tries to adhere to. This means that a continuously reconciled system is self-healing, while any on-demand model has no such guarantee.
 
