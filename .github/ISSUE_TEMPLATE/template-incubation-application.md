@@ -40,7 +40,6 @@ _The project has been adopted by the following organizations in a testing and in
 
 **Adopter Interviews:** Submit 5-7 adopters via the [Adopter Interview Questionnaire](https://docs.google.com/forms/d/1n1oLC6IKj5-7S_xeEjIdEjbtS9SWniuAo7IIOyLFuK8/edit) prior to DD assignment. See the [definition of an adopter](https://github.com/cncf/toc/blob/main/FAQ.md#what-is-the-definition-of-an-adopter) for guidance on who qualifies.
 
-
 ## Application Process Principles
 
 ### Suggested
