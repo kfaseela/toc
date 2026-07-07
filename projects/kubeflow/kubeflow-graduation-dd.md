@@ -6,66 +6,64 @@
 
 ### Criteria Evaluation
 
-[Faseela K](https://github.com/kfaseela) conducted the due diligence for Kubeflow, which applied for Graduation from Incubating status (accepted 2023-07-23).
+Faseela K and Brandt Keller conducted the due diligence for Kubeflow, which applied for Graduation from Incubating status (accepted 2023-07-23).
 
 The following criteria implementations are noteworthy:
 
-- [Kubeflow](https://www.kubeflow.org/) is a modular, Kubernetes-native AI/ML platform that provides a foundation of composable tools for building and operating AI/ML workloads at scale. This graduation covers **6 subprojects**: Kubeflow Trainer, Kubeflow Pipelines, Kubeflow Katib, Kubeflow Notebooks, Kubeflow Spark Operator, and Kubeflow Hub (repo: kubeflow/hub). Each subproject satisfies the graduation criteria independently.
-- The project's governance is multi-layered, with a Kubeflow Steering Committee (KSC, 5 seats, max 1 per organization) for strategic decisions, the Kubeflow Outreach Committee for community-facing coordination, the Kubeflow Distribution Committee (KDC) for release coordination, and Working Groups owning each subproject. The 2026 KSC election completed on schedule, with all seats filled and no organization holding more than 1 seat.
-- Strong contributor health per [LF Insights](https://insights.lfx.linuxfoundation.org/foundation/cncf/overview/github?project=kubeflow&routedFrom=Github&bestPractice=false&repository=all&dateFilters=Last%20365%20Days&dateRange=custom&startDate=2025-06-17&endDate=2026-06-17): active contributors from a wide range of organizations, with positive YoY growth.
-- A [General Technical Review (GTR)](https://github.com/kubeflow/community/blob/master/KUBEFLOW-GENERAL-TECHNICAL-REVIEW.md) was completed in September 2025, providing comprehensive architecture, design, and engineering documentation that satisfies several DD criteria. GTR snapshot is merged into cncf/toc via [Add Kubeflow GTR snapshot (toc#2180)](https://github.com/cncf/toc/pull/2180).
-- All 6 graduation subprojects hold at least an OpenSSF Best Practices Passing badge; Kubeflow Trainer and Kubeflow Katib have achieved Gold.
-- The Kubeflow Ecosystem page and process were established during this review in response to DD findings, clarifying the boundary between core subprojects and ecosystem partners (KServe, Feast, Elyra). KServe, previously presented under the Kubeflow brand, is now clearly identified as an independent CNCF Incubating project.
-- Kubeflow demonstrates broad adoption spanning scientific research, financial services, logistics, and AI/ML platform industries, with production deployments ranging from hundreds to tens of thousands of daily active users and hundreds of thousands of indirect business end users. Four adopter interviews were conducted, collectively covering all 6 graduation subprojects across diverse industries and deployment scales.
-- The Kubeflow maintainers and community have been exceptionally responsive throughout this review - PRs were merged, issues filed and assigned, and maintainers engaged constructively on all feedback.
+- [Kubeflow](https://www.kubeflow.org/) is a modular, Kubernetes-native AI/ML platform. This graduation covers **6 subprojects**: Kubeflow Trainer, Kubeflow Pipelines, Kubeflow Katib, Kubeflow Notebooks, Kubeflow Spark Operator, and Kubeflow Hub.
+- Governance is shared across the KSC, KOC, KDC, and the Working Groups that own each subproject, with the 2026 KSC election completed on schedule and representation rules holding.
+- The Kubeflow maintainers and community were highly responsive throughout this review, with PRs merged, issues filed and assigned, and feedback addressed quickly.
+- All graduation subprojects hold at least an OpenSSF Best Practices Passing badge; Kubeflow Trainer and Kubeflow Katib have achieved Gold.
+- The Kubeflow Ecosystem page and process were established during this review to clarify the boundary between core subprojects and ecosystem partners such as KServe, Feast, and Elyra.
+- Kubeflow shows broad adoption across research, financial services, logistics, and platform teams. Four adopter interviews were conducted across the graduation scope.
+- Contributor health remains strong, with active contributors from a wide range of organizations and positive YoY growth.
 
-The following blocking items were identified during the review and must be resolved before a graduation vote:
+DD Findings Resolved (Blocking/Required):
 
-- **Adopter interview publication approval**: All 4 planned adopter interviews have been conducted (CERN, and three additional adopters from financial services, logistics, and AI/ML platform sectors). CERN and one additional adopter (financial services, published anonymously) have approved their interviews for publication. The remaining 2 interviews are pending formal publication approval from the respective adopters before they can be cited publicly in the DD. Interview reports cover all 6 graduation subprojects and are available for TOC review pending approval.
+- **[kubeflow/community#992](https://github.com/kubeflow/community/issues/992) - Third-party security audit findings**: Ada Logics audit is published; findings are resolved or tracked. KServe findings are out of scope (independent CNCF project).
 
-The following items were raised and resolved during the review:
+- **[kubeflow/community#972](https://github.com/kubeflow/community/issues/972) - WG contributor progression docs**: WG Chair requirements and responsibilities documented in [community#989](https://github.com/kubeflow/community/pull/989).
+- **[kubeflow/community#988](https://github.com/kubeflow/community/issues/988) - Roadmap gaps**: notebooks ROADMAP added; kubeflow/kubeflow and website subproject roadmap references updated.
+- **[kubeflow/community#990](https://github.com/kubeflow/community/issues/990) - Notebooks release process docs**: `RELEASE.md` added in notebooks and linked to detailed release docs.
+- **[kubeflow/community#955](https://github.com/kubeflow/community/issues/955) - KSC vendor-neutrality and election status**: 2026 election results published and org-limit language consolidated.
+- **[kubeflow/community#961](https://github.com/kubeflow/community/issues/961)/[community#962](https://github.com/kubeflow/community/issues/962) - KServe ecosystem categorization**: ecosystem boundary clarified via [community#963](https://github.com/kubeflow/community/pull/963), [website#4384](https://github.com/kubeflow/website/pull/4384), [community#965](https://github.com/kubeflow/community/pull/965).
 
-- **[kubeflow/community#992](https://github.com/kubeflow/community/issues/992) - Track and resolve third-party security audit findings**: The Ada Logics audit report (Sept 2025) is published at [security/Ada_Logics-Kubeflow-security-audit-2025.pdf](https://github.com/kubeflow/community/blob/master/security/Ada_Logics-Kubeflow-security-audit-2025.pdf). All in-scope findings are resolved or tracked with linked PRs/issues. KServe findings are out of scope as KServe is an independent CNCF project. Full tracking details are in [kubeflow/community#992](https://github.com/kubeflow/community/issues/992). Resolved.
+Non-Blocking Recommendations Completed:
 
-- **[kubeflow/community#972](https://github.com/kubeflow/community/issues/972) - Document contributor progression to WG Lead/Chair roles**: WG governance refactored via [Refactor WG governance and Chair requirements (community#989)](https://github.com/kubeflow/community/pull/989): WGs now have clearly documented Chair requirements (must be a community Member, hold a subproject role, sustained contributions, sponsored by a member + super-majority vote), responsibilities/privileges, 2+ Chairs minimum, and all private Google Doc links removed.
-- **[kubeflow/community#988](https://github.com/kubeflow/community/issues/988) - Fix roadmap gaps**: ROADMAP.md added to kubeflow/notebooks ([Add ROADMAP.md (notebooks#1188)](https://github.com/kubeflow/notebooks/pull/1188)); kubeflow/kubeflow README and platform roadmap updated ([Update kubeflow README (kubeflow#7790)](https://github.com/kubeflow/kubeflow/pull/7790), [Update platform roadmap (kubeflow#7788)](https://github.com/kubeflow/kubeflow/pull/7788)); website subproject table updated ([Update website subproject table (website#4409)](https://github.com/kubeflow/website/pull/4409)).
-- **[kubeflow/community#990](https://github.com/kubeflow/community/issues/990) - Add notebooks release process documentation**: `RELEASE.md` added to `kubeflow/notebooks` main branch via [Add RELEASE.md (notebooks#1189)](https://github.com/kubeflow/notebooks/pull/1189), pointing to detailed step-by-step release docs in `releasing/README.md` on both `notebooks-v1` and `notebooks-v2` branches.
-- **[kubeflow/community#955](https://github.com/kubeflow/community/issues/955) - KSC vendor-neutrality language and election status**: Stale KEP-645 org-limit language and overdue election state. Resolved via [Add 2026 KSC election results (community#956)](https://github.com/kubeflow/community/pull/956) and [Consolidate KSC org-limit rule (community#957)](https://github.com/kubeflow/community/pull/957).
-- **[kubeflow/community#961](https://github.com/kubeflow/community/issues/961)/[community#962: KServe subproject status](https://github.com/kubeflow/community/issues/962) - KServe ecosystem categorization**: KServe was presented as a Kubeflow subproject without indicating its independent CNCF Incubating status. Resolved via merged PRs: [Add ecosystem join process (community#963)](https://github.com/kubeflow/community/pull/963), [Add Kubeflow Ecosystem page (website#4384)](https://github.com/kubeflow/website/pull/4384), [Add subproject maturity levels (community#965)](https://github.com/kubeflow/community/pull/965). *Note*: Adopter interviews further validated this finding - production adopters continue to reference KServe as part of their Kubeflow deployment, reflecting the tight historical association. This reinforces the importance of the ecosystem boundary clarification work completed above.
-
-The following non-blocking recommendations were provided:
-
-- **[kubeflow/community#964](https://github.com/kubeflow/community/issues/964) - Submit Kubeflow GTR snapshot to cncf/toc**: Merged via [Add Kubeflow GTR snapshot (toc#2180)](https://github.com/cncf/toc/pull/2180). Resolved.
-- **[kubeflow/community#996](https://github.com/kubeflow/community/pull/996) - Security self-assessment submission to cncf/toc**: Merged via [Kubeflow Security Self-Assessment (toc#2201)](https://github.com/cncf/toc/pull/2201). Resolved.
+- **[kubeflow/community#964](https://github.com/kubeflow/community/issues/964) - GTR snapshot submission**: completed via [toc#2180](https://github.com/cncf/toc/pull/2180).
+- **[kubeflow/community#996](https://github.com/kubeflow/community/pull/996) - Security self-assessment submission**: completed via [toc#2201](https://github.com/cncf/toc/pull/2201).
 - **[kubeflow/community#976](https://github.com/kubeflow/community/issues/976) - Add `CODE_OF_CONDUCT.md` files to subproject repos**: All graduation subproject repos now have `CODE_OF_CONDUCT.md`.
 - **[kubeflow/community#991](https://github.com/kubeflow/community/issues/991) - Security self-assessment enhancements**: Broken Trainer release link fixed and stale vulnerability-status wording updated via [Fix self-assessment links and stale wording (community#996)](https://github.com/kubeflow/community/pull/996).
 - **Community/ADOPTERS.md listed KServe in the "Adopters of Kubeflow Projects" table**: KServe removed from the subprojects adopters table; only the 6 graduation subprojects are listed.
-- **[kubeflow/community#967: WG docs subproject ownership](https://github.com/kubeflow/community/issues/967)/[community#969: WG README stale links](https://github.com/kubeflow/community/issues/969) - WG-level meeting docs had stale/broken links**: Outdated WGs/SIGs removed via [Remove outdated WGs/SIGs (community#974)](https://github.com/kubeflow/community/pull/974); WG docs updated across multiple PRs: [Update WG Training charter, remove WG AutoML (#981)](https://github.com/kubeflow/community/pull/981), [Update WG Notebooks docs (#983)](https://github.com/kubeflow/community/pull/983), [Update WG ML Experience subprojects and meetings (#984)](https://github.com/kubeflow/community/pull/984), [Fix WG Data broken link and organizer list (#985)](https://github.com/kubeflow/community/pull/985), [Update KFP WG and charter (#997)](https://github.com/kubeflow/community/pull/997); website governance page fixed via [Fix website governance page (website#4398)](https://github.com/kubeflow/website/pull/4398).
+- **[kubeflow/community#967](https://github.com/kubeflow/community/issues/967)/[community#969](https://github.com/kubeflow/community/issues/969) - WG docs ownership and stale links**: outdated WGs removed and WG docs/link updates merged across community and website.
 
-- **Enhancements requested by adopters during interviews (non-blocking)**: The following improvement areas were surfaced across the two completed adopter interviews. These are not graduation blockers but are noted here for project awareness and future roadmap consideration:
-  - **Helm chart for installation**: Kustomize-based installation is complex for new operators; a Helm chart would significantly lower the adoption threshold. *Maintainer response*: Helm support has been in progress for 2-3 years. Trainer and Spark Operator already have Helm charts ([trainer/charts](https://github.com/kubeflow/trainer/tree/master/charts/kubeflow-trainer), [spark-operator/charts](https://github.com/kubeflow/spark-operator/tree/master/charts/spark-operator-chart)). A GSoC 2026 project is actively working toward Helm support in the Kubeflow Community Distribution: [GSoC 2026 Project 5](https://www.kubeflow.org/events/upcoming-events/gsoc-2026/#project-5-helm-charts).
-  - **Service manager / operator documentation**: Upstream docs are adequate for end users but insufficient for operators managing multi-tenant production deployments.
-  - **Security: inference endpoint multi-tenancy**: Cross-namespace authorization issue in KServe/Knative - upstream: [Cross-namespace inference endpoint auth issue (knative/serving#12533)](https://github.com/knative/serving/issues/12533).
-  - **Pipeline artifact multi-tenancy**: [Pipeline artifact multi-tenancy (pipelines#11760)](https://github.com/kubeflow/pipelines/issues/11760).
-  - **MLMD component maintenance**: MLMD is no longer actively maintained and depends on deprecated `mysql_native_password` auth, blocking MySQL backend upgrades.
-  - **Security CVE response across interconnected components**: CVE in a dependency (e.g., KServe) can block the entire platform; a security best practices document for operators was requested.
-  - **More frequent releases / faster security patching**: Current release cadence can be too slow for regulated environments with aggressive patching requirements.
-  - **Maintainer growth, particularly for Pipelines**: Long-term sustainability risk noted; growing the maintainer base across subprojects is an active priority.
-  - **UX for non-engineer users**: A simplified UX for data scientists and business analysts with no Kubernetes background would broaden adoption.
+Adopter Interview Feedback (Non-Blocking, Ongoing):
+
+- **Helm chart for installation**: deployment ergonomics remain a common request. Trainer and Spark Operator already provide Helm charts, and community-distribution Helm work is in progress.
+- **Service manager / operator documentation**: Upstream docs are adequate for end users but insufficient for operators managing multi-tenant production deployments.
+- **Security: inference endpoint multi-tenancy**: Cross-namespace authorization issue in KServe/Knative - upstream: [Cross-namespace inference endpoint auth issue (knative/serving#12533)](https://github.com/knative/serving/issues/12533).
+- **Pipeline artifact multi-tenancy**: [Pipeline artifact multi-tenancy (pipelines#11760)](https://github.com/kubeflow/pipelines/issues/11760).
+- **MLMD component maintenance**: MLMD is no longer actively maintained and depends on deprecated `mysql_native_password` auth, blocking MySQL backend upgrades.
+- **Security CVE response across interconnected components**: CVE in a dependency (e.g., KServe) can block the entire platform; a security best practices document for operators was requested.
+- **More frequent releases / faster security patching**: Current release cadence can be too slow for regulated environments with aggressive patching requirements.
+- **Maintainer growth, particularly for Pipelines**: Long-term sustainability risk noted; growing the maintainer base across subprojects is an active priority.
+- **UX for non-engineer users**: A simplified UX for data scientists and business analysts with no Kubernetes background would broaden adoption.
 
 ### Adoption Evaluation
 
-> **Status: In Progress - adopter interviews ongoing.**
+Adopter feedback for Kubeflow satisfies the TOC's adoption requirements for Graduation. Public ADOPTERS.md evidence across the graduation-scope subprojects, together with four completed adopter interviews, shows sustained production use in enterprise and research environments.
 
-Kubeflow demonstrates wide adoption across large enterprise and research organizations. Public ADOPTERS.md files show 40+ production adopters for Spark Operator, ~20 for Trainer, and strong representation from organizations across enterprise, financial services, logistics, research, and cloud provider sectors.
+The interviews consistently point to lifecycle coverage, Kubernetes-native architecture, multi-cloud flexibility, and active maintainer engagement.
 
-All 4 adopter interviews have been completed. 2 have been approved for publication (CERN, and one financial services adopter published anonymously); the remaining 2 are pending formal publication approval. The approved interviews span multiple graduation subprojects including platform-level, pipeline, training, and data workload usage patterns. Adopter interview summaries for the remaining interviews will be added to this document once publication approval is received.
+Adopter-requested enhancements are already captured in the previous section and are tracked as non-blocking follow-up items.
 
 ### Final Assessment
 
-> **Status: Pending - first parse complete, iteration in progress.**
+The TOC has found the project to have satisfied the criteria for Graduation.
 
-Pending DD evaluation.
+Based on the evidence in this DD, Kubeflow is ready for Graduation.
+
+The remaining items identified in this DD are non-blocking and should be tracked through the project's public roadmap and follow-up execution, with continued visibility to the TOC.
 
 ---
 
@@ -110,33 +108,33 @@ All 6 graduation subprojects have dedicated documentation pages on kubeflow.org 
 
 - [X] **Governance has continuously been iterated upon by the project as a result of their experience applying it, with the governance history demonstrating evolution of maturity alongside the project's maturity evolution.**
 
-The Kubeflow governance model has evolved alongside the project: from a single Google-donated project to a multi-org KSC structure, introduction of the KOC for outreach, introduction of formal WG lifecycle docs, KEP process for proposals, and most recently a formal subproject application process and ecosystem membership process. The history of governance PRs in kubeflow/community demonstrates ongoing iteration.
+The Kubeflow governance model has evolved alongside the project: from a single Google-donated project to a multi-org structure with the KSC, KOC, KDC, formal WG lifecycle docs, KEPs, and a subproject application process. The history of governance PRs in kubeflow/community demonstrates ongoing iteration.
 
 ### Required
 
 - [X] **Clear and discoverable project governance documentation.**
 
-[GOVERNANCE.md](https://github.com/kubeflow/community/blob/master/GOVERNANCE.md) exists at the community repo root and links to all key governance documents: [KSC charter](https://github.com/kubeflow/community/blob/master/committee-steering/charter.md), [KOC charter](https://github.com/kubeflow/community/blob/master/committee-outreach/charter.md), [WG governance](https://github.com/kubeflow/community/blob/master/wg-governance.md), contributor ladder, and code of conduct. The kubeflow.org [governance page](https://www.kubeflow.org/docs/about/governance/) is linked from the website.
+The kubeflow.org [governance page](https://www.kubeflow.org/docs/about/governance/) is the public governance root. In the community repo, governance is documented in the KSC, KOC, and KDC charters, WG governance, and the contributor ladder ([KSC charter](https://github.com/kubeflow/community/blob/master/committee-steering/charter.md), [KOC charter](https://github.com/kubeflow/community/blob/master/committee-outreach/charter.md), [KDC charter](https://github.com/kubeflow/community/blob/master/committee-distribution/charter.md), [wg-governance](https://github.com/kubeflow/community/blob/master/committee-steering/wg-governance.md), [community-membership](https://github.com/kubeflow/community/blob/master/community-membership.md)).
 
 - [X] **Governance is up to date with actual project activities, including any meetings, elections, leadership, or approval processes.**
 
-KSC elections and membership are current (2026 election completed). WG governance docs have been fully refreshed: defunct WGs (wg-deployment, wg-serving, wg-manifests, sig-feature-store, sig-onprem) removed via [Remove outdated WGs/SIGs (community#974)](https://github.com/kubeflow/community/pull/974); WG READMEs, charters, and wgs.yaml updated with current meetings, organizers, and CNCF Slack links across multiple PRs ([Update WG Training charter, remove WG AutoML (#981)](https://github.com/kubeflow/community/pull/981), [Update WG Notebooks docs (#983)](https://github.com/kubeflow/community/pull/983), [Update WG ML Experience subprojects and meetings (#984)](https://github.com/kubeflow/community/pull/984), [Fix WG Data broken link and organizer list (#985)](https://github.com/kubeflow/community/pull/985), [Update KFP WG and charter (#997)](https://github.com/kubeflow/community/pull/997)); website governance page synced via [Fix website governance page (website#4398)](https://github.com/kubeflow/website/pull/4398). Resolved via [WG docs need to reflect current subproject ownership (community#967)](https://github.com/kubeflow/community/issues/967) and [WG README files have stale and broken links (community#969)](https://github.com/kubeflow/community/issues/969).
+KSC elections and membership are current (2026 election completed). WG governance docs were refreshed to remove defunct WGs and update current meetings, organizers, and links via [community#974](https://github.com/kubeflow/community/pull/974), [community#989](https://github.com/kubeflow/community/pull/989), [community#997](https://github.com/kubeflow/community/pull/997), and [website#4398](https://github.com/kubeflow/website/pull/4398).
 
 - [X] **Governance clearly documents [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) of project direction.**
 
-The KSC charter documents an explicit 1-seat-per-organization cap for all 5 KSC seats, enforced at election time. Current composition: 5 seats, 5 unique organizations (Apple, Wiz, Red Hat, DHL, NVIDIA). The KOC charter similarly caps Chair representation. Note: LF Insights shows Red Hat as the top contributor by commit volume - notable technical concentration, but governance capture is structurally prevented by the representation rules.
+The KSC charter documents an explicit 1-seat-per-organization cap for its seats, and the KOC charter similarly caps Chair representation. This keeps governance structurally vendor-neutral even with some technical concentration in contributor activity; the 2026 KSC election confirmed the rule in practice.
 
 - [X] **Document how the project makes decisions on leadership, contribution acceptance, requests to the CNCF, and changes to governance or project goals.**
 
-Decision-making is documented across three processes: (1) KSC decisions ([committee-steering/charter.md](https://github.com/kubeflow/community/blob/master/committee-steering/charter.md)) - Normal Decisions (quorum + majority) and Special Decisions (70% threshold) for governance/charter changes; (2) [KEP process](https://github.com/kubeflow/community/tree/master/proposals) for user/operator-facing or major architectural changes; (3) [Ecosystem join process](https://github.com/kubeflow/community/tree/master/ecosystem) for external project partnerships (KSC vote required).
+Decision-making is documented across KSC decisions, the KEP process, and the ecosystem join process for external project partnerships ([committee-steering/charter.md](https://github.com/kubeflow/community/blob/master/committee-steering/charter.md), [proposals](https://github.com/kubeflow/community/tree/master/proposals), [ecosystem](https://github.com/kubeflow/community/tree/master/ecosystem)).
 
 - [X] **Document how role, function-based members, or sub-teams are assigned, onboarded, and removed for specific teams (example: Security Response Committee).**
 
-The [Kubeflow community page](https://www.kubeflow.org/docs/about/community/) and [Contributing](https://www.kubeflow.org/docs/about/contributing/) page provide the public entry point, while the [Kubeflow contributor ladder](https://github.com/kubeflow/community/blob/master/community-membership.md) defines how Members, Reviewers, and Approvers are onboarded and removed. The [Kubeflow governance page](https://www.kubeflow.org/docs/about/governance/) and refactored [wg-governance.md](https://github.com/kubeflow/community/blob/master/committee-steering/wg-governance.md) document WG Chair selection, responsibilities, privileges, and inactive Chair removal. Chairs must be at least a community Member, hold a documented subproject role, have sustained contributions, be sponsored by a member, and be confirmed by super-majority vote of existing Chairs. All private Google Doc references removed. Resolved via [Refactor WG governance and Chair requirements (community#989)](https://github.com/kubeflow/community/pull/989).
+The [Kubeflow community page](https://www.kubeflow.org/docs/about/community/) and [Contributing](https://www.kubeflow.org/docs/about/contributing/) page provide the public entry point, while the contributor ladder and WG governance document how Members, Reviewers, Approvers, and WG Chairs are onboarded, expected to contribute, and removed when inactive. The WG chair requirements were clarified in [community#989](https://github.com/kubeflow/community/pull/989).
 
 - [X] **Document complete list of current maintainers, including names, contact information, domain of responsibility, and affiliation.**
 
-[MAINTAINERS.md](https://github.com/kubeflow/community/blob/master/MAINTAINERS.md) links to the KSC member list, KOC member list, WG chairs/leads in `wgs.yaml`, and per-subproject OWNERS files. The KSC and KOC lists include names, GitHub handles, organizations, and terms. Staleness in `wgs.yaml` is being addressed by [Remove outdated WGs/SIGs (community#974)](https://github.com/kubeflow/community/pull/974).
+[MAINTAINERS.md](https://github.com/kubeflow/community/blob/master/MAINTAINERS.md) links to the KSC member list, KOC member list, WG chairs/leads in `wgs.yaml`, and per-subproject OWNERS files. The KSC and KOC lists include names, GitHub handles, organizations, and terms; `wgs.yaml` was refreshed alongside [community#974](https://github.com/kubeflow/community/pull/974).
 
 - [X] **A number of active maintainers which is appropriate to the size and scope of the project.**
 
@@ -166,11 +164,11 @@ Kubeflow uses a GitOps ACL system ([kubeflow/internal-acls](https://github.com/k
 
 - [X] **Document agreement that project will adopt CNCF Code of Conduct.**
 
-The CNCF Code of Conduct is adopted and documented at [kubeflow.org/docs/about/community/#code-of-conduct](https://www.kubeflow.org/docs/about/community/#code-of-conduct), and cross-linked from GOVERNANCE.md and WG governance docs.
+The CNCF Code of Conduct is adopted and documented at [kubeflow.org/docs/about/community/#code-of-conduct](https://www.kubeflow.org/docs/about/community/#code-of-conduct), and cross-linked from committee charters and WG governance docs.
 
 - [X] **CNCF Code of Conduct is cross-linked from other governance documents.**
 
-The CNCF CoC is referenced in GOVERNANCE.md, wg-governance.md, and individual WG charters. As of 2026-06-18, standalone `CODE_OF_CONDUCT.md` files are present in all 7 graduation subproject repos: community, spark-operator, trainer, katib, notebooks, hub, and pipelines. Resolved via [kubeflow/community#976](https://github.com/kubeflow/community/issues/976).
+The CNCF CoC is referenced in WG governance docs and individual WG/committee charters. As of 2026-06-18, standalone `CODE_OF_CONDUCT.md` files are present in all 7 graduation subproject repos: community, spark-operator, trainer, katib, notebooks, hub, and pipelines. Resolved via [kubeflow/community#976](https://github.com/kubeflow/community/issues/976).
 
 - [X] **All subprojects, if any, are listed.**
 
@@ -188,7 +186,7 @@ The subproject add/remove process is documented in [community/subprojects/README
 
 **Add process:** Documented in [community/subprojects/README.md](https://github.com/kubeflow/community/tree/master/subprojects): GitHub issue -> proposal doc -> community call demo -> PR -> KSC vote -> repo transfer. Prior applications (spark-operator, model-registry) are archived there.
 
-**Remove/retire process:** Documented in [wgs/wg-lifecycle.md](https://github.com/kubeflow/community/blob/master/wgs/wg-lifecycle.md): WG retirement triggers (3 months without quorum -> should retire; 6 months -> must retire), archiving steps, and KSC final vote.
+**Remove/retire process:** Documented in [WG lifecycle](https://github.com/kubeflow/community/blob/master/committee-steering/wg-governance.md#wg-lifecycle): WG retirement triggers (3 months without quorum -> should retire; 6 months -> must retire), archiving steps, and KSC final vote.
 
 **Contribution docs:** All 6 subprojects have `CONTRIBUTING.md` files (verified 2026-06-16).
 
@@ -254,7 +252,7 @@ Community-wide changes use the [KEP process](https://github.com/kubeflow/communi
 
 - [X] **Document overview of project architecture and software design that demonstrates viable cloud native use cases, as part of the project's documentation.**
 
-Architecture documentation is comprehensive: the [GTR](https://github.com/kubeflow/community/blob/master/KUBEFLOW-GENERAL-TECHNICAL-REVIEW.md) covers design principles, architecture requirements, service dependencies, IAM design, API topology, and release process. The [kubeflow.org architecture page](https://www.kubeflow.org/docs/started/architecture/) includes an AI lifecycle diagram and component descriptions. The [Kubeflow Community Distribution release pages](https://www.kubeflow.org/docs/kubeflow-distribution/releases/) provide per-release component version matrices.
+Architecture documentation is detailed: the [GTR](https://github.com/kubeflow/community/blob/master/KUBEFLOW-GENERAL-TECHNICAL-REVIEW.md) covers design principles, architecture requirements, service dependencies, IAM design, API topology, and release process. The [kubeflow.org architecture page](https://www.kubeflow.org/docs/started/architecture/) includes an AI lifecycle diagram and component descriptions. The [Kubeflow Community Distribution release pages](https://www.kubeflow.org/docs/kubeflow-distribution/releases/) provide per-release component version matrices.
 
 - [ ] **Document the project's release process and guidelines publicly in a RELEASES.md or equivalent file that defines:**
   - [X] Release expectations (scheduled or based on feature implementation)
@@ -301,7 +299,7 @@ Security response roles are documented in each subproject's security policy: rep
 
 - [X] **Document Security Self-Assessment.**
 
-The [Kubeflow Security Self-Assessment](https://github.com/kubeflow/community/blob/master/security/self-assessment.md) is published in kubeflow/community, actively maintained (updated 2026), and covers all 6 graduation subprojects. Content structure follows TAG Security guidance including metadata, security links, background, actors, goals, security functions, secure development practices, and security issue resolution. The self-assessment is also merged into cncf/toc via [Kubeflow Security Self-Assessment (toc#2201)](https://github.com/cncf/toc/pull/2201).
+The [Kubeflow Security Self-Assessment](https://github.com/kubeflow/community/blob/master/security/self-assessment.md) is published in kubeflow/community, actively maintained (updated 2026), and covers all 6 graduation subprojects. Content structure follows TAG Security guidance including metadata, security links, background, actors, goals, security functions, secure development practices, and security issue resolution. The self-assessment is also merged into cncf/toc via [Kubeflow Security Self-Assessment (toc#2201)](https://github.com/cncf/toc/pull/2201) and is currently located in this DD folder at [security-assessment/self-assessment.md](security-assessment/self-assessment.md).
 
 - [X] **Third Party Security Review.**
   - [X] Moderate and low findings from the Third Party Security Review are planned/tracked for resolution.
@@ -341,9 +339,9 @@ Notebooks and Pipelines ADOPTERS.md files are sparse relative to actual deployme
 
 - [ ] **Used in appropriate capacity by at least 3 independent + indirect/direct adopters, (these are not required to be in the publicly documented list of adopters)**
 
-> **Status: Pending - adopter interviews in progress.**
+> **Status: In Progress - interviews completed, TOC verification pending.**
 
-2 of 4 planned adopter interviews have been completed. Based on public ADOPTERS.md evidence alone (Spark Operator 40+, Trainer ~20, platform 7), broad production adoption is clearly evidenced in aggregate; formal TOC verification via adopter interviews is required to close this criterion. Remaining interviews are being scheduled.
+All 4 planned adopter interviews have been completed. Based on public ADOPTERS.md evidence alone (Spark Operator 40+, Trainer ~20, platform 7), broad production adoption is clearly evidenced in aggregate; formal TOC verification via adopter interviews is required to close this criterion.
 
 - [ ] **TOC verification of adopters.**
 
@@ -353,17 +351,23 @@ Will be closed together with the previous item once all planned interviews are c
 
 #### Adoption
 
-> 1 of 4 adopter interviews has been approved for publication. 1 additional completed interview is pending adopter approval. 2 further interviews are being scheduled. Full adoption details will be recorded in this section prior to the graduation vote.
+> All 4 adopter interviews are complete and included below. CERN, DHL Data & AI, and NVIDIA are published with attribution; one additional interview is currently published in anonymized form pending explicit approval for named publication.
 
 ##### Adopter 1 - CERN/Scientific research organization
 
-This adopter interview was conducted in June 2026 and recorded a strong production adopter running Kubeflow at scale across Notebooks, KServe, Trainer, Katib, and Pipelines, with plans to expand to thousands of users as part of a 3-5 year AI strategy. Refer to the [interview summary](adopter-interviews/CERN-adopter-interview.md) for more details.
+This adopter interview was conducted in June 2026 and recorded a strong production adopter running Kubeflow at scale across Notebooks, KServe, Trainer, Katib, and Pipelines, with plans to expand to thousands of users as part of a 3-5 year AI strategy. Refer to the [interview summary](adopter-interviews/kubeflow-adopter-interview-cern.md) for more details.
 
-##### Adopter 2 - Pending adopter approval for publication
+##### Adopter 2 - Financial services organization (anonymized)
 
-##### Adopter 3 - Pending scheduling
+This adopter interview was conducted in June 2026 with a large regulated financial services organization using Kubeflow extensively in production across multiple subprojects. Refer to the [interview summary](adopter-interviews/kubeflow-adopter-interview-adopter-1.md) for details.
 
-##### Adopter 4 - Pending scheduling
+##### Adopter 3 - DHL Data & AI / Logistics organization
+
+This adopter interview was conducted in June 2026 with DHL Data & AI, operating Kubeflow in production at significant scale across Notebooks, Pipelines, Dashboard, and Spark Operator, with Katib, Trainer, and Hub on the near-term roadmap. Refer to the [interview summary](adopter-interviews/kubeflow-adopter-interview-dhl.md) for details.
+
+##### Adopter 4 - NVIDIA / AI/ML platform organization
+
+This adopter interview was conducted in June 2026 with NVIDIA Run:ai, using Kubeflow Trainer in production for large-scale distributed training. Refer to the [interview summary](adopter-interviews/kubeflow-adopter-interview-nvidia.md) for details.
 
 - [X] **Clearly documented integrations and/or compatibility with other CNCF projects as well as non-CNCF projects.**
 

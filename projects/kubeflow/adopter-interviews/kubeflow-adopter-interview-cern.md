@@ -1,29 +1,22 @@
 # Kubeflow Adopter Interview - CERN
 
-> **Status**: Approved by CERN — cleared for inclusion in the DD and public sharing.
-
----
-
 **Organization**: CERN (European Organization for Nuclear Research)  
 **Industry**: Fundamental scientific research / high-energy physics  
 **Interview Date**: June 8, 2026  
 **Interviewers (TOC)**: Faseela K  
 **Interviewees**: Ricardo Rocha, Raulian Chiorescu (CERN)  
-**Reference Architecture**: https://architecture.cncf.io/architectures/cern-scientific-computing/
+**Reference Architecture**: https://architecture.cncf.io/architectures/cern-scientific-computing/  
 
----
 
 ## Organization Intro
 
 CERN is the European Organization for Nuclear Research, one of the world's largest scientific research centres. It operates the Large Hadron Collider and runs fundamental physics research, employing thousands of scientists and engineers worldwide. CERN runs significant computing infrastructure to process and analyze data from physics experiments, making it a large-scale Kubernetes and cloud-native operator.
 
----
 
 ## 1. How long has your organization used the project?
 
-CERN began evaluating Kubeflow in 2019–2020. Limited production usage started in 2021, initially focused on notebooks, distributed training and model serving via KServe. Usage expanded significantly in 2024 following an upgrade to Kubeflow 1.9, which added Notebooks and broader KServe adoption to the production workload.
+CERN began evaluating Kubeflow in 2019-2020. Limited production usage started in 2021, initially focused on notebooks, distributed training and model serving via KServe. Usage expanded in 2024 following an upgrade to Kubeflow 1.9, which added Notebooks and broader KServe adoption to the production workload.
 
----
 
 ## 2. What were the main motivations to adopt the project and which key features do you use today?
 
@@ -35,13 +28,11 @@ CERN had home-built systems for ML workloads but needed a single solution that c
 - **Hyperparameter Optimization (Katib)**: still actively used
 - **Pipelines**: ML workflow orchestration, and other workflow automation
 
----
 
 ## 3. Compared with other products and projects in this space (proprietary and open), what drew you to the project?
 
 Kubeflow was selected because it fills a unique gap in the ecosystem: it bridges the cloud-native (Kubernetes) world with the higher-level ML tooling world. CERN evaluated other options including home-built systems, but Kubeflow's breadth of coverage across the ML lifecycle made it the strongest fit. Its Kubernetes-native design meant integration with CERN's existing infrastructure was relatively easy at the infrastructure level.
 
----
 
 ## 4. What is the current level of usage (pre-production, production) and scale?
 
@@ -50,13 +41,11 @@ Kubeflow was selected because it fills a unique gap in the ecosystem: it bridges
 **GPU Capacity**: Hundreds of GPUs currently; expected to roughly double by end of year  
 **Reference**: https://architecture.cncf.io/architectures/cern-scientific-computing/
 
----
 
 ## 5. What version of the project is currently in use and what is your update cadence with the project?
 
 Currently running **Kubeflow 1.9.2**. CERN is working toward upgrading to 1.11, though the cadence has slowed as the user base has grown. Earlier in the adoption, upgrades happened faster due to a smaller user footprint. Upgrades are sometimes done at the component level (e.g., upgrading KServe independently) rather than as a full platform upgrade.
 
----
 
 ## 6. Can you walk me through the experience of adopting or integrating Kubeflow? What challenges did you experience?
 
@@ -68,13 +57,11 @@ Currently running **Kubeflow 1.9.2**. CERN is working toward upgrading to 1.11, 
 - **Istio dependency**: Kubeflow's hard dependency on Istio was a significant challenge. CERN does not otherwise use Istio, and it was unclear why Istio was required rather than a standard ingress. This represented a major learning curve and integration effort.
 - **Documentation gaps for service managers**: Upstream documentation is better suited for end users than for the administrators and service managers responsible for operating the platform at scale.
 
----
 
 ## 7. Did you find the information in the repo or the project docs valuable to your implementation?
 
-From an end-user perspective, CERN has developed its own internal documentation. Users increasingly rely on AI tools to generate configurations, which often fails because the tooling doesn't accurately reflect current Kubeflow docs. Upstream documentation could be significantly improved from a service manager and operator perspective; this was identified as one of the areas where investment would have the greatest impact.
+From an end-user perspective, CERN has developed its own internal documentation. Users increasingly rely on AI tools to generate configurations, which often fails because the tooling doesn't accurately reflect current Kubeflow docs. Upstream documentation could be improved from a service manager and operator perspective; this was identified as one of the areas where investment would have the most impact.
 
----
 
 ## 8. Did you need to engage with the community members or maintainers? If so, what was the context and outcome?
 
@@ -94,7 +81,6 @@ Yes, CERN actively engages with the community:
 
 Community is perceived as easy to interact with and diverse.
 
----
 
 ## 9. Has your implementation of the project provided measurable value?
 
@@ -106,7 +92,6 @@ Yes, specifically:
 - **GPU utilization and cost savings**: better scheduling and multi-user GPU access reduces idle capacity
 - **Access democratization**: enabling interactive GPU access for data scientists and ML researchers with no prior Kubernetes knowledge, via the Kubeflow SDK
 
----
 
 ## 10. If the project were to be archived, what level of difficulty would your organization experience to remove it?
 
@@ -114,24 +99,22 @@ Kubeflow is deeply embedded in CERN's infrastructure. Difficulty would vary by c
 
 - **Inference (KServe)**: Relatively easier to migrate; standard OpenAI-compatible APIs mean CERN is not tightly coupled to a specific backend
 - **Training, notebooks, and interactive sessions**: Much harder; these are tightly integrated with CERN's GPU allocation model and user workflows
-- **Overall**: Given Kubeflow's role as the planned core of CERN's AI strategy for the next 3–5 years, full removal would be a significant multi-year effort. CERN would likely consider stepping into a maintainership and community management role to preserve functionality before accepting full migration to alternatives.
+- **Overall**: Given Kubeflow's role as the planned core of CERN's AI strategy for the next 3-5 years, full removal would be a significant multi-year effort. CERN would likely consider stepping into a maintainership and community management role to preserve functionality before accepting full migration to alternatives.
 
----
 
 ## 11. Is there something that holds the project back from reaching its ultimate potential?
 
 - **Limited vendor ecosystem**: At KubeCon events, CERN primarily sees end users; few vendors or commercial offerings are visibly supporting Kubeflow. Greater vendor visibility would strengthen the project's reputation and adoption by organizations that require commercial support options.
-- **Deployment complexity**: Installation remains a barrier for new adopters. A Helm chart would significantly lower the entry threshold.
+- **Deployment complexity**: Installation remains a barrier for new adopters. A Helm chart would lower the entry threshold.
 - **Service manager documentation**: Upstream docs are adequate for end users but insufficient for operators managing multi-tenant production deployments.
 - **Evolution speed**: Kubeflow has many tightly-coupled components, which means adapting to large AI/ML shifts (e.g., new model paradigms) is inherently slower than for more modular projects.
 
----
 
 ## 12. In your opinion, what could the project improve?
 
 - **Helm chart for installation**: would dramatically improve adoption by organizations following standard Kubernetes deployment patterns
 - **Service manager documentation**: dedicated operator/admin guides are largely missing upstream
-- **Security: CVE response across interconnected components**: Kubeflow's interconnected subprojects mean a CVE in a dependency (e.g., KServe) can block the entire platform. A comprehensive security best practices document for operators would be valuable; the level of isolation between components was poor but is improving over time.
+- **Security: CVE response across interconnected components**: Kubeflow's interconnected subprojects mean a CVE in a dependency (e.g., KServe) can block the entire platform. A security best practices document for operators would be valuable; the level of isolation between components was poor but is improving over time.
 - **Security: inference endpoint multi-tenancy**: currently CERN is affected by an upstream KServe/Knative issue with cross-namespace authorization of inference endpoints:
   https://github.com/knative/serving/issues/12533
   (Not yet tracked as a Kubeflow issue, but documented in the manifests repo under "Cross-namespace Access Control" at https://github.com/kubeflow/manifests/blob/master/common/istio/cluster-local-gateway/overlays/m2m-auth/README.md)
@@ -140,7 +123,6 @@ Kubeflow is deeply embedded in CERN's infrastructure. Difficulty would vary by c
 - **Monitoring stack**: CERN's monitoring stack for Kubeflow is being contributed upstream (https://github.com/kubeflow/manifests/issues/3426)
 - **User onboarding via SDK**: The Kubeflow SDK (https://github.com/kubeflow/sdk) is making onboarding easier for data scientists and ML researchers with no Kubernetes background by abstracting Kubernetes concepts into Python; continued investment here would broaden adoption further.
 
----
 
 ## 13. What are the overall strengths of the project?
 
@@ -150,18 +132,16 @@ Kubeflow is deeply embedded in CERN's infrastructure. Difficulty would vary by c
 - **Community**: Open, diverse, and accessible; responsive to engagement
 - **Breadth of coverage**: Covers the full ML lifecycle from interactive development (Notebooks) through training, HPO (Katib), pipelines, and serving
 
----
 
 ## 14. Do you have any future plans regarding the project? More involvement, feature requests, expansion, etc.?
 
 - **Current contributions**: 4 CERN team members have contributed upstream, including:
   - https://github.com/kubeflow/manifests/pull/3264
   - Monitoring stack contribution (in progress): https://github.com/kubeflow/manifests/issues/3426
-- **Strategic roadmap**: Kubeflow is planned as a core component of CERN's AI strategy for the next 3–5 years, serving as the standard platform for interactive GPU access and ML operations across different scientific communities
+- **Strategic roadmap**: Kubeflow is planned as a core component of CERN's AI strategy for the next 3-5 years, serving as the standard platform for interactive GPU access and ML operations across different scientific communities
 - **Scale expansion**: CERN plans to extend Kubeflow-based GPU access beyond the current ML community to thousands of users across other scientific domains
 - **Maintainer involvement**: Ricardo and Raulian are open to exploring deeper maintainer involvement in the future as CERN's contribution footprint grows
 
----
 
 ## Maturity Level Survey
 
@@ -175,5 +155,5 @@ Kubeflow is deeply embedded in CERN's infrastructure. Difficulty would vary by c
 
 3. **Do you rely on those levels internally in any way, and if yes how?**
 
-   Yes. CERN uses CNCF maturity levels as a signal of project health and long-term viability when evaluating technologies for adoption. Graduation status is a meaningful indicator for infrastructure decisions at CERN — it reflects that a project has demonstrated production readiness, governance maturity, and a sustainable community, all of which are important to an organization running critical scientific infrastructure.
+  Yes. CERN uses CNCF maturity levels as a signal of project health and long-term viability when evaluating technologies for adoption. Graduation status is a meaningful indicator for infrastructure decisions at CERN - it reflects that a project has demonstrated production readiness, governance maturity, and a sustainable community, all of which are important to an organization running critical scientific infrastructure.
 
