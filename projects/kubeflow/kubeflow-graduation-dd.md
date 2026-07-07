@@ -21,7 +21,6 @@ The following criteria implementations are noteworthy:
 DD Findings Resolved (Blocking/Required):
 
 - **[kubeflow/community#992](https://github.com/kubeflow/community/issues/992) - Third-party security audit findings**: Ada Logics audit is published; findings are resolved or tracked. KServe findings are out of scope (independent CNCF project).
-
 - **[kubeflow/community#972](https://github.com/kubeflow/community/issues/972) - WG contributor progression docs**: WG Chair requirements and responsibilities documented in [community#989](https://github.com/kubeflow/community/pull/989).
 - **[kubeflow/community#988](https://github.com/kubeflow/community/issues/988) - Roadmap gaps**: notebooks ROADMAP added; kubeflow/kubeflow and website subproject roadmap references updated.
 - **[kubeflow/community#990](https://github.com/kubeflow/community/issues/990) - Notebooks release process docs**: `RELEASE.md` added in notebooks and linked to detailed release docs.
@@ -100,7 +99,7 @@ Completion of this due diligence document, resolution of concerns raised, and pr
 
 - [X] **Additional documentation as appropriate for project type, e.g.: installation documentation, end user documentation, reference implementation and/or code samples.**
 
-All 6 graduation subprojects have dedicated documentation pages on kubeflow.org with installation guides, user guides, operator guides, and reference documentation. The [kubeflow.org docs site](https://www.kubeflow.org/docs/) is actively maintained. The [General Technical Review](https://github.com/kubeflow/community/blob/master/KUBEFLOW-GENERAL-TECHNICAL-REVIEW.md) (GTR) provides an extensive technical reference. Kubeflow Notebooks has an architectural dependency on Kubeflow Central Dashboard and cannot be deployed standalone - this is a known design characteristic, not a documentation gap.
+All 6 graduation subprojects have dedicated documentation pages on kubeflow.org with installation guides, user guides, operator guides, and reference documentation. The [kubeflow.org docs site](https://www.kubeflow.org/docs/) is actively maintained. The [General Technical Review](https://github.com/kubeflow/community/blob/master/KUBEFLOW-GENERAL-TECHNICAL-REVIEW.md) (GTR) provides an extensive technical reference. Kubeflow Notebooks has an architectural dependency on Kubeflow Central Dashboard and cannot yet be deployed standalone - this is however a part of their roadmap.
 
 ## Governance and Maintainers
 
@@ -156,7 +155,7 @@ Removal example:
 
 - [X] **Project maintainers from at least 2 organizations that demonstrates survivability.**
 
-Maintainer org diversity is broad across all graduation subprojects, with approvers spanning a wide range of organizations ([LFX Insights](https://insights.lfx.dev/foundation/cncf/overview/github?project=kubeflow)). Org affiliation for governance-level maintainers is documented in the KSC and KOC member lists linked from [MAINTAINERS.md](https://github.com/kubeflow/community/blob/master/MAINTAINERS.md), and for WG leads/chairs in [wgs.yaml](https://github.com/kubeflow/community/blob/master/wgs.yaml). No subproject is controlled by a single organization. WG Notebooks leadership was expanded via [Update WG Notebooks docs (community#983)](https://github.com/kubeflow/community/pull/983), resolving a prior single-org concern.
+Maintainer org diversity is broad across all graduation subprojects, with approvers spanning a wide range of organizations ([LFX Insights](https://insights.lfx.dev/foundation/cncf/overview/github?project=kubeflow)). Org affiliation for governance-level maintainers is documented in the KSC and KOC member lists linked from [MAINTAINERS.md](https://github.com/kubeflow/community/blob/master/MAINTAINERS.md), and for WG leads/chairs in [wgs.yaml](https://github.com/kubeflow/community/blob/master/wgs.yaml). No subproject is controlled by a single organization. WG Notebooks leadership was updated in [Update WG Notebooks docs (community#983)](https://github.com/kubeflow/community/pull/983), to replace an inactive lead and ensure organizational diversity.
 
 - [X] **Code and Doc ownership in Github and elsewhere matches documented governance roles.**
 
@@ -254,7 +253,7 @@ Community-wide changes use the [KEP process](https://github.com/kubeflow/communi
 
 Architecture documentation is detailed: the [GTR](https://github.com/kubeflow/community/blob/master/KUBEFLOW-GENERAL-TECHNICAL-REVIEW.md) covers design principles, architecture requirements, service dependencies, IAM design, API topology, and release process. The [kubeflow.org architecture page](https://www.kubeflow.org/docs/started/architecture/) includes an AI lifecycle diagram and component descriptions. The [Kubeflow Community Distribution release pages](https://www.kubeflow.org/docs/kubeflow-distribution/releases/) provide per-release component version matrices.
 
-- [ ] **Document the project's release process and guidelines publicly in a RELEASES.md or equivalent file that defines:**
+- [x] **Document the project's release process and guidelines publicly in a RELEASES.md or equivalent file that defines:**
   - [X] Release expectations (scheduled or based on feature implementation)
   - [X] Tagging as stable, unstable, and security related releases
   - [X] Information on branch and tag strategies
