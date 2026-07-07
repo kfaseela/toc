@@ -28,7 +28,7 @@ Key features currently in use: **Notebooks, Pipelines, Trainer, Katib** - all co
 Two primary differentiators:
 
 1. **Regulatory compliance and cloud agnosticism**: Adopter 1 operates under extremely strict regulatory requirements that preclude many managed cloud services. Kubeflow's open-source, self-hosted, cloud-agnostic nature (with full deployment control) was a key differentiator.
-2. **Full ML lifecycle coverage**: While alternative tools exist for individual components (notebook provisioners, workflow orchestrators, distributed compute abstractions), nothing else consolidates the full model development lifecycle into one ecosystem. As stated directly: *"I could think of something to replace some pieces, but not anything that consolidates everything together."*
+2. **Full ML lifecycle coverage**: While alternative tools exist for individual components (notebook provisioners, workflow orchestrators, distributed compute abstractions), nothing else consolidates the full model development lifecycle into one ecosystem - no comparable alternative covers the full scope.
 
 
 ## 4. What is the current level of usage (pre-production, production) and scale?
@@ -127,7 +127,7 @@ Given the scale (thousands of users, high workflow volume, critical production M
 
 1. **Do you feel you have a good understanding of the meaning of each CNCF maturity level?**
 
-   Yes. As active maintainers within the Kubeflow project, both interviewees are well-familiar with the CNCF maturity framework and the criteria distinguishing Sandbox, Incubating, and Graduated projects.
+   Yes. Both interviewees are well-versed in the CNCF maturity framework and the criteria distinguishing Sandbox, Incubating, and Graduated projects.
 
 2. **Is there information missing regarding the meaning of each different level?**
 
