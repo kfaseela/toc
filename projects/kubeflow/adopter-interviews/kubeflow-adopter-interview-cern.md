@@ -105,7 +105,7 @@ Kubeflow is deeply embedded in CERN's infrastructure. Difficulty would vary by c
 ## 11. Is there something that holds the project back from reaching its ultimate potential?
 
 - **Limited vendor ecosystem**: At KubeCon events, CERN primarily sees end users; few vendors or commercial offerings are visibly supporting Kubeflow. Greater vendor visibility would strengthen the project's reputation and adoption by organizations that require commercial support options.
-- **Deployment complexity**: Installation remains a barrier for new adopters. A Helm chart would lower the entry threshold.
+- **Deployment complexity**: Kustomize-based installation adds complexity that can slow down new adopters. CERN has adapted to the existing manifests over time and sees Helm support as the clearest path to lowering the entry barrier. The community is moving in this direction — several subprojects already ship Helm charts, and a GSoC 2026 project is actively working on Helm support for the community distribution. CERN plans to contribute to this effort. Earlier community-driven Helm alternatives (deployKF, treebeard) were also explored but did not reach maturity.
 - **Service manager documentation**: Upstream docs are adequate for end users but insufficient for operators managing multi-tenant production deployments.
 - **Evolution speed**: Kubeflow has many tightly-coupled components, which means adapting to large AI/ML shifts (e.g., new model paradigms) is inherently slower than for more modular projects.
 

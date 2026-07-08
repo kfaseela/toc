@@ -38,7 +38,7 @@ Non-Blocking Recommendations Completed:
 
 Adopter Interview Feedback (Non-Blocking, Ongoing):
 
-- **Helm chart for installation**: deployment ergonomics remain a common request. Trainer and Spark Operator already provide Helm charts, and community-distribution Helm work is in progress.
+- **Helm chart for installation**: deployment ergonomics remain a common request. Trainer and Spark Operator already provide Helm charts, and community-distribution Helm work is actively in progress as part of the KDC roadmap.
 - **Service manager / operator documentation**: Upstream docs are adequate for end users but insufficient for operators managing multi-tenant production deployments.
 - **Security: inference endpoint multi-tenancy**: Cross-namespace authorization issue in KServe/Knative - upstream: [Cross-namespace inference endpoint auth issue (knative/serving#12533)](https://github.com/knative/serving/issues/12533).
 - **Pipeline artifact multi-tenancy**: [Pipeline artifact multi-tenancy (pipelines#11760)](https://github.com/kubeflow/pipelines/issues/11760).
