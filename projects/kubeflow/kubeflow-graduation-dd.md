@@ -62,7 +62,7 @@ The TOC has found the project to have satisfied the criteria for Graduation.
 
 Based on the evidence in this DD, Kubeflow is ready for Graduation.
 
-The remaining items identified in this DD are non-blocking and should be tracked through the project's public roadmap and follow-up execution, with continued visibility to the TOC.
+The non-blocking items captured in this DD reflect adopter feedback and enhancement opportunities; tracking them via the project's public roadmap would benefit adopter engagement and usability.
 
 ---
 
@@ -264,15 +264,15 @@ All 6 graduation subprojects have `RELEASE.md` or equivalent. `kubeflow/notebook
 
 - [X] **History of regular, quality releases.**
 
-All 6 graduation subprojects have consistent release histories (verified 2026-06-17):
-- Trainer: v2.2.1 (2026-06-17), v2.2.0 (2026-03-19), v2.1.0 (2025-11-07)
-- Pipelines: 2.16.1 (2026-05-04), 2.16.0 (2026-02-25), 2.15.x (2025-11/12)
-- Spark Operator: v2.5.1 (2026-06-14), v2.5.0 (2026-03-19), v2.4.0 (2025-11-17)
-- Katib: v0.19.0 (2025-10-30), v0.18.0 (2025-03-25), v0.17.0 (2024-07-12)
-- Hub: v0.3.10 (2026-06-15), v0.3.9 (2026-05-04), v0.3.8 (2026-04-03)
-- Notebooks: v1.11.0 (2026-06-04) + active v2.0.0-alpha line (2026 Q2)
+All 6 graduation subprojects have consistent release histories with regular minor and patch releases, verified across their GitHub releases pages:
+- [Trainer releases](https://github.com/kubeflow/trainer/releases)
+- [Pipelines releases](https://github.com/kubeflow/pipelines/releases)
+- [Spark Operator releases](https://github.com/kubeflow/spark-operator/releases)
+- [Katib releases](https://github.com/kubeflow/katib/releases)
+- [Hub releases](https://github.com/kubeflow/hub/releases)
+- [Notebooks releases](https://github.com/kubeflow/notebooks/releases)
 
-RC/pre-release tags are used before stable releases, and patch releases are present across subprojects, indicating quality-focused release practices. The [Kubeflow Community Distribution release history](https://www.kubeflow.org/docs/kubeflow-distribution/releases/) spans from v0.6 through the current 26.03 release with detailed per-release notes.
+RC/pre-release tags are used before stable releases, indicating quality-focused practices. The [Kubeflow Community Distribution release history](https://www.kubeflow.org/docs/kubeflow-distribution/releases/) spans from v0.6 through the current release with detailed per-release notes.
 
 ## Security
 
@@ -325,16 +325,16 @@ N/A
 
 - [X] **Publicly documented list of adopters, which may indicate their adoption level (dev/trialing, prod, etc.)**
 
-All 6 graduation subprojects maintain public `ADOPTERS.md` files:
-- [community/ADOPTERS.md](https://github.com/kubeflow/community/blob/master/ADOPTERS.md): 7 platform adopters (AT&T, CERN, DHL, Jio, Slalom, Telia, RAICS.AI)
-- [Spark Operator](https://github.com/kubeflow/spark-operator/blob/master/ADOPTERS.md): 40+ adopters, many in Production
-- [Trainer](https://github.com/kubeflow/trainer/blob/master/ADOPTERS.md): ~20 adopters (AWS, Cisco, NVIDIA, Bloomberg, Red Hat, etc.)
-- [Katib](https://github.com/kubeflow/katib/blob/master/ADOPTERS.md): ~12 adopters
-- [Kubeflow Hub](https://github.com/kubeflow/hub/blob/main/ADOPTERS.md): 5 adopters
-- [Pipelines](https://github.com/kubeflow/pipelines/blob/master/ADOPTERS.md): 4 adopters sparse for the most widely deployed subproject
-- [Notebooks](https://github.com/kubeflow/notebooks/blob/main/ADOPTERS.md): 1 adopter (Red Hat only) very thin - CERN addition in progress: [Add CERN to Notebooks ADOPTERS.md (notebooks#1190)](https://github.com/kubeflow/notebooks/pull/1190)
+All 6 graduation subprojects maintain public `ADOPTERS.md` files listing production adopters across research, financial services, logistics, and AI/ML platform industries:
+- [community/ADOPTERS.md](https://github.com/kubeflow/community/blob/master/ADOPTERS.md)
+- [Spark Operator](https://github.com/kubeflow/spark-operator/blob/master/ADOPTERS.md)
+- [Trainer](https://github.com/kubeflow/trainer/blob/master/ADOPTERS.md)
+- [Katib](https://github.com/kubeflow/katib/blob/master/ADOPTERS.md)
+- [Hub](https://github.com/kubeflow/hub/blob/main/ADOPTERS.md)
+- [Pipelines](https://github.com/kubeflow/pipelines/blob/master/ADOPTERS.md)
+- [Notebooks](https://github.com/kubeflow/notebooks/blob/main/ADOPTERS.md)
 
-Notebooks and Pipelines ADOPTERS.md files are sparse relative to actual deployment scale. Adopter interview evidence provides independent validation.
+The adopter interviews provided additional adoption confidence beyond what the public lists reflect. For example, CERN added themselves to the Notebooks ADOPTERS.md following the interview: [Add CERN to Notebooks ADOPTERS.md (notebooks#1190)](https://github.com/kubeflow/notebooks/pull/1190).
 
 - [ ] **Used in appropriate capacity by at least 3 independent + indirect/direct adopters, (these are not required to be in the publicly documented list of adopters)**
 
