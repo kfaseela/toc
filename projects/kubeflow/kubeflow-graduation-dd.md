@@ -253,7 +253,7 @@ Community-wide changes use the [KEP process](https://github.com/kubeflow/communi
 
 Architecture documentation is detailed: the [GTR](https://github.com/kubeflow/community/blob/master/KUBEFLOW-GENERAL-TECHNICAL-REVIEW.md) covers design principles, architecture requirements, service dependencies, IAM design, API topology, and release process. The [kubeflow.org architecture page](https://www.kubeflow.org/docs/started/architecture/) includes an AI lifecycle diagram and component descriptions. The [Kubeflow Community Distribution release pages](https://www.kubeflow.org/docs/kubeflow-distribution/releases/) provide per-release component version matrices.
 
-- [x] **Document the project's release process and guidelines publicly in a RELEASES.md or equivalent file that defines:**
+- [X] **Document the project's release process and guidelines publicly in a RELEASES.md or equivalent file that defines:**
   - [X] Release expectations (scheduled or based on feature implementation)
   - [X] Tagging as stable, unstable, and security related releases
   - [X] Information on branch and tag strategies
@@ -336,17 +336,13 @@ All 6 graduation subprojects maintain public `ADOPTERS.md` files listing product
 
 The adopter interviews provided additional adoption confidence beyond what the public lists reflect. For example, CERN added themselves to the Notebooks ADOPTERS.md following the interview: [Add CERN to Notebooks ADOPTERS.md (notebooks#1190)](https://github.com/kubeflow/notebooks/pull/1190).
 
-- [ ] **Used in appropriate capacity by at least 3 independent + indirect/direct adopters, (these are not required to be in the publicly documented list of adopters)**
+- [X] **Used in appropriate capacity by at least 3 independent + indirect/direct adopters, (these are not required to be in the publicly documented list of adopters)**
 
-> **Status: In Progress - interviews completed, TOC verification pending.**
+> **Status: Satisfied.** 4 adopter interviews completed across research (CERN), logistics (DHL Data & AI), AI/ML platform (NVIDIA), and financial services (anonymized), collectively covering all 6 graduation subprojects across diverse industries and deployment scales.
 
-All 4 planned adopter interviews have been completed. Based on public ADOPTERS.md evidence alone (Spark Operator 40+, Trainer ~20, platform 7), broad production adoption is clearly evidenced in aggregate; formal TOC verification via adopter interviews is required to close this criterion.
+- [X] **TOC verification of adopters.**
 
-- [ ] **TOC verification of adopters.**
-
-> **Status: Pending - linked to the above criterion.**
-
-Will be closed together with the previous item once all planned interviews are complete and TOC confirms at least 3 independent production adopters across the graduation subprojects.
+> **Status: Satisfied.** TOC sponsors have conducted and verified 4 adopter interviews. All 4 adopters confirmed sustained production use across the graduation subprojects.
 
 #### Adoption
 
