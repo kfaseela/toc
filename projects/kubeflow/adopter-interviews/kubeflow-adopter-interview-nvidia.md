@@ -49,7 +49,7 @@ Migration to V2: Planned but blocked on elastic workload support. NVIDIA Run:ai'
 
 Integration was smooth overall. The Trainer API was straightforward and the Kubernetes-native design was praised. Three challenges were encountered:
 
-1. Large-scale configuration guidance: When users brought very large workloads, there was no clear documentation on configure Trainer for high-scale scenarios. A specific configuration parameter was not exposed in the API at the time. NVIDIA contributed the fix upstream and it was merged.
+1. Large-scale configuration guidance: When users brought very large workloads, there was no clear documentation on configuring Trainer for high-scale scenarios. A specific configuration parameter was not exposed in the API at the time. NVIDIA contributed the fix upstream and it was merged.
 
 2. Job status visibility for non-Kubernetes users: the NVIDIA Run:ai platform abstracts Kubernetes from end users. At the time, Trainer's status exposure was limited. This has been significantly improved in V2. NVIDIA presented this at KubeCon ~1 year ago; maintainers linked the talk to an upstream tracking issue without being asked.
 
