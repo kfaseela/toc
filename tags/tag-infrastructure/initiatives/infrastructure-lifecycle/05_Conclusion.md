@@ -10,5 +10,6 @@ feedback.
 
 Bruno Schaatsbergen (@bschaatsbergen)
 Thomas Schuetz (@thschue)
+Roberth Strand (@roberthstrand)
 
 ## Reviewers
