@@ -7,7 +7,7 @@
 **Interviewees**: Julius Von Kohout (Principal Platform Engineer), Dr. Gezim Sejdiu (Chief Data Engineer)  
 
 
-## Organization Intro
+## Organization Introduction 
 
 ### Can you give us an overview of your organization and what it does?
 
